@@ -1,30 +1,12 @@
 <!doctype html>
-<title>Editor</title>
-<style>
-* { margin: 0; padding: 0; -moz-box-sizing: border-box; box-sizing: border-box; }
-html, body { height: 100%; }
-textarea { width: 33.3%; height: 50%; border: 1px solid; }
-iframe { width: 99.9%; height: 50%; border: 1px solid; }
-</style>
-<textarea id="html"><!-- html -->
-<body>
-</body></textarea><textarea id="css">/* CSS */
-body { background: #abc; }</textarea><textarea id="js">/* JS */
-alert("ok")</textarea>
+<title>Mini HTML/CSS/JS editor online</title>
+<textarea id="html"><!-- HTML -->&#10;<body>&#10;</body></textarea><textarea id="css">/* CSS */&#10;body { background: #ace; }</textarea><textarea id="js">/* JS */&#10;console.log("ok")</textarea>
 <iframe id="rendering"></iframe>
 <script>
-  function $(id){return document.getElementById(id)}
-  editor($("html"), $("css"), $("js"), $("rendering"));
-  function editor(h,c,j,r){
-    var cv, hv, jv;
-    setInterval(function(){
-      if(cv != c.value || hv != h.value || jv != j.value){
-        cv = c.value;
-        hv = h.value;
-        jv = j.value;
-        r.src="about:blank";
-        r.contentWindow.document.write('<style>' + c.value + '</style>' + h.value + '<script>' + j.value + '<' + '/script>');
-      }
-    }
-    ,3000)}
+  /* Selector */        function $(id){return document.getElementById(id)}
+  /* Elements */        var h=$("html"),c=$("css"),j=$("js"),r=$("rendering");
+  /* Update function */ function u(h,c,j,r){r.src="";r=r.contentWindow.document;r.write(h.value+"<script>"+j.value+"<\/script><style>"+c.value);r.close()} 
+  /* Call it onkeyup */ document.onkeyup=function(e){u(h,c,j,r)}
+  /* Call it now */     u(h,c,j,r)
 </script>
+<style>*{margin:0;padding:0;-moz-box-sizing:border-box;box-sizing:border-box}html,body{height:100%}textarea{width:33.3%;height:50%;border:1px solid}iframe{width:99.9%;height:50%;border:1px solid}
