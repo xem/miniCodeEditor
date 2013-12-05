@@ -1,12 +1,62 @@
-<!doctype html>
-<title>Mini HTML/CSS/JS editor online</title>
-<textarea id="html"><!-- HTML -->&#10;<body>&#10;</body></textarea><textarea id="css">/* CSS */&#10;body { background: #ace; }</textarea><textarea id="js">/* JS */&#10;console.log("ok")</textarea>
-<iframe id="rendering"></iframe>
+<style>
+  h1, h2 { text-align: center; margin: 5px 0; }
+  h1 { font-size: 40px; }
+  h2 { font-size: 28px; }
+  h3 { font-size: 24px; margin: 5px 0; }
+  body { width: 680px; margin: 20px auto; font-family: arial; }
+  textarea { height: 80px; background: #def; padding: 5px; width: 680px; font-family: monospace; overflow: hidden; resize: none; }
+</style>
+<a href=//github.com/xem/miniCodeEditor><img style="position:absolute;top:0;right:0;border:0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+<h1>MiniCodeEditor</h1>
+<h2>A HTML/CSS/JavaScript code editor in <span id=count-top></span>+ bytes</h2>
+<br>
+<h3>Source code:</h3>
+<b>Golfed by <a href=//twitter.com/MaximeEuziere>xem</a></b>
+<br>
+<br>
+<textarea id=minified resize=none></textarea>
+<br>
+<br>
+<br>
+<h3>Features:</h3>
+<br>
+- Cross-browser (IE6+, Firefox, Chrome...)
+<br>
+- Embeddable
+<br>
+- Edit HTML, CSS and JS, the result is updated in real time
+<br>
+- You can save your work as a standalone HTML file (with "ctrl-s" or file > "save as...")
+<br>
+- The interface is poor, the source code is ugly, but hey, it works!
+<br>
+<br>
+<h3>Download:</h3>
+<br>
+- <a href=editor.html>Cross-browser</a> (<span id=count1></span> bytes)
+<br>
+- <a href=modern.html>Modern browsers only</a> (<span id=count2></span> bytes)
+<br>
+- <a href=ff.html>Firefox only</a> (<span id=count3></span> bytes)
+<br>
+<br>
+<h3>Live demo:</h3>
+<br>
+<iframe src=demo.html width=680 height=300></iframe>
+
+<script src=//code.jquery.com/jquery-1.10.2.min.js></script>
 <script>
-  /* Selector */        function $(id){return document.getElementById(id)}
-  /* Elements */        var h=$("html"),c=$("css"),j=$("js"),r=$("rendering");
-  /* Update function */ function u(h,c,j,r){r.src="";r=r.contentWindow.document;r.write(h.value+"<script>"+j.value+"<\/script><style>"+c.value);r.close()} 
-  /* Call it onkeyup */ document.onkeyup=function(e){u(h,c,j,r)}
-  /* Call it now */     u(h,c,j,r)
+  $(function(){
+    $.ajax("editor.html?" + Math.random()).done(function(data){
+      $("#count1").text(data.length);
+    });
+    $.ajax("modern.html?" + Math.random()).done(function(data){
+      $("#count2").text(data.length);
+    });
+    $.ajax("ff.html?" + Math.random()).done(function(data){
+      $("#minified").text(data);
+      $("#count3").text(data.length);
+      $("#count-top").text(data.length);
+    });
+  });
 </script>
-<style>*{margin:0;padding:0;-moz-box-sizing:border-box;box-sizing:border-box}html,body{height:100%}textarea{width:33.3%;height:50%;border:1px solid}iframe{width:99.9%;height:50%;border:1px solid}
