@@ -11,7 +11,7 @@
 <h2>A HTML/CSS/JavaScript code editor in <span id=count-top></span>+ bytes</h2>
 <br>
 <h3>Source code:</h3>
-<b>Golfed by <a href=//twitter.com/MaximeEuziere>xem</a></b>
+<b>Golfed by <a href=//twitter.com/MaximeEuziere>xem</a>, <a href=//twitter.com/p01>p01</a></a>, <a href=//twitter.com/subzey>subzey</a>, <a href=//twitter.com/aemkei>aemkei</a></b>
 <br>
 <br>
 <textarea id=minified resize=none></textarea>
@@ -28,16 +28,12 @@
 <br>
 - You can save your work as a standalone HTML file (with "ctrl-s" or file > "save as...")
 <br>
-- The interface is poor, the source code is ugly, but hey, it works!
-<br>
 <br>
 <h3>Download:</h3>
 <br>
 - <a href=editor.html>Cross-browser</a> (<span id=count1></span> bytes)
 <br>
 - <a href=modern.html>Modern browsers only</a> (<span id=count2></span> bytes)
-<br>
-- <a href=ff.html>Firefox only</a> (<span id=count3></span> bytes)
 <br>
 <br>
 <h3>Live demo:</h3>
@@ -51,11 +47,8 @@
       $("#count1").text(data.length);
     });
     $.ajax("modern.html?" + Math.random()).done(function(data){
-      $("#count2").text(data.length);
-    });
-    $.ajax("ff.html?" + Math.random()).done(function(data){
       $("#minified").text(data);
-      $("#count3").text(data.length);
+      $("#count2").text(data.length);
       $("#count-top").text(data.length);
     });
   });
