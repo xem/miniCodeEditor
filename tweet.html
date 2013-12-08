@@ -6,6 +6,10 @@
   h3 { font-size: 24px; }
   body { width: 650px; margin: 20px auto; font-family: arial; }
   .code { height: 80px; background: #def; padding: 5px; width: 650px; font-family: monospace; overflow: hidden; resize: none; }
+  .code2 { height: 40px; background: #def; padding: 5px; width: 650px; font-family: monospace; overflow: hidden; resize: none; }
+  * { box-sizing: border-box; -moz-box-sizing: border-box; }
+  textarea { resize: none; width: 33.3%; height: 50%; }
+  iframe { width: 100%; height: 50%; }
 </style>
 <h2><a href=".">MiniCodeEditor</a><br>in JavaScript and in 140 characters!</h2>
 <br>
@@ -13,16 +17,22 @@
 <textarea class=code>document.write(unescape(escape("🁸𘁩𩀽𩐾🁳𨱲𪑰𭀾𩡯𬠨𪐽𜰻𪐭𛐻𚑥𛡩𫡮𩑲𢁔𣑌𚰽𙰼𭁥𮁴𨑲𩑡𘁩𩀽𭀧𚱩𚰧𘁯𫡩𫡰𭑴👜𙱥𛡬𨑳𭁃𪁩𫁤𛡳𬡣𩁯𨰽𭀲𦱶🐢𭡡𫁵𩐢𧐫𘠼𬱣𬡩𬁴🠢𚱴𜁛𭡝𚰢🁜𛱳𨱲𪑰𭀾🁳𭁹𫁥🠢𚱴𜑛𭡝𧀧🠧🀯𬱣𬡩𬁴🠼𪑦𬡡𫑥🠀").replace(/uD./g,'')))</textarea>
 <br>
 <br>
-Works on Firefox, Chrome &amp; Opera, like the original!
+- Works on Firefox, Chrome &amp; Opera, like <a href=".">the original</a>!
 <br>
 <br>
-More info <a href=//gist.github.com/xem/7086007>here</a> and <a href=//xem.github.io/?golfing>here</a>.
+- More info <a href=//gist.github.com/xem/7086007>here</a> and <a href=//xem.github.io/?golfing>here</a>.
 <br>
 <br>
-Twitted <a href="https://twitter.com/MaximeEuziere/status/409678306586279936">here</a> as a proof of concept.
+- Twitted <a href="https://twitter.com/MaximeEuziere/status/409678306586279936">here</a> as a proof of concept.
 <br>
 <br>
-HackerNews thread: <a href="https://news.ycombinator.com/item?id=6870827">here</a>.
+- HackerNews thread: <a href="https://news.ycombinator.com/item?id=6870827">here</a>.
+<br>
+<br>
+- Bonus: here's a little bit of tweetable CSS to make the editor go fullscreen: (124 bytes)
+<br>
+<br>
+<textarea class=code2>*{box-sizing:border-box;-moz-box-sizing:border-box}textarea{resize:none;width:33.3%;height:50%}iframe{width:100%;height:50%}</textarea>
 <br>
 <br>
 <h3>Demo:</h3>
