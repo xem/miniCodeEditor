@@ -1,4 +1,3 @@
-A mini HTML/CSS/JS code editor directly in your browser
-==
+A mini HTML/CSS/JS code editor
 
 http://xem.github.io/miniCodeEditor
