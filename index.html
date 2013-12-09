@@ -1,41 +1,18 @@
+<meta charset=utf-8>
 <style>
   h1, h2 { text-align: center; }
   h1 { font-size: 40px; }
   h2 { font-size: 28px; }
   h3 { font-size: 24px; }
   body { width: 680px; margin: 20px auto; font-family: arial; }
-  textarea { height: 60px; background: #def; padding: 5px; width: 680px; font-family: monospace; overflow: hidden; resize: none; }
-  textarea.long { height: 80px; }
+  textarea { height: 70px; background: #def; padding: 5px; width: 680px; font-family: monospace; overflow: hidden; resize: none; }
+  textarea.right { float: right; background: #ffa; height: 90px; padding: 5px; width: 500px; font-family: monospace; overflow: hidden; resize: none; }
   a.right { float: right }
 </style>
 <a href=//github.com/xem/miniCodeEditor><img style="position:absolute;top:0;right:0;border:0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 <h1>MiniCodeEditor</h1>
 <h2>A HTML/CSS/JavaScript code editor in <span id=count-top></span>+ bytes</h2>
 Golfed by <a href=//twitter.com/MaximeEuziere>xem</a>, <a href=//twitter.com/p01>p01</a></a>, <a href=//twitter.com/subzey>subzey</a>, <a href=//twitter.com/aemkei>aemkei</a>, <b>rlauck</b> and <b>bburky</b>
-<br>
-<br>
-<br>
-<b>Don't miss <a href="tweet.html">miniCodeEditor in a tweet</a>!</b>
-<br>
-<br>
-<h3>Source:</h3>
-<br>
-<b>Tiny</b> (Firefox, Chrome, Opera 15+) - <span id=count1></span> bytes
-<textarea id=tiny resize=none></textarea>
-<a class=right href=tiny.html>Test / download</a>
-<br>
-<br>
-<br>
-<b>Fullscreen</b> (Firefox, Chrome, Opera 15+) - <span id=count2></span> bytes
-<textarea id=fullscreen resize=none></textarea>
-<a class=right href=fullscreen.html>Test / download</a>
-<br>
-<br>
-<br>
-<b>Fullscreen &amp; cross-browser</b> (Firefox, Chrome, Opera 12+, Safari, IE6+) - <span id=count3></span> bytes
-<textarea class=long id=cross-browser resize=none></textarea>
-<a class=right href=cross-browser.html>Test / download</a>
-<br>
 <br>
 <br>
 <br>
@@ -46,6 +23,78 @@ Edit HTML, CSS and JS, the result is updated in real time
 <br>
 <br>
 <iframe src=demo.html width=680 height=300></iframe>
+<br>
+<br>
+<h3>Source:</h3>
+<br>
+<b>Modern</b> (Firefox 25+, Chrome 4+, Opera 15+) - <span id=count1></span> bytes
+<br>
+<br>
+<textarea id=modern resize=modern></textarea>
+<a class=right href=modern.html>Test / download</a>
+<br>
+<br>
+<br>
+<b>Cross-browser</b> (Firefox, Chrome, Opera, Safari, IE6+) - <span id=count2></span> bytes
+<br>
+<br>
+<textarea id=cross-browser resize=none></textarea>
+<a class=right href=cross-browser.html>Test / download</a>
+<br>
+<br>
+<br>
+<br>
+<b>You can also put <a href="tweet.html">MiniCodeEditor in a tweet</a>!</b> (140 characters)
+<br>
+<br>
+<textarea class=code>document.write(unescape(escape("🁸𘁩𩀽𩐾🁳𨱲𪑰𭀾𩡯𬠨𪐽𜰻𪐭𛐻𚑥𛡩𫡮𩑲𢁔𣑌𚰽𙰼𭁥𮁴𨑲𩑡𘁩𩀽𭀧𚱩𚰧𘁯𫡩𫡰𭑴👜𙱥𛡬𨑳𭁃𪁩𫁤𛡳𬡣𩁯𨰽𭀲𦱶🐢𭡡𫁵𩐢𧐫𘠼𬱣𬡩𬁴🠢𚱴𜁛𭡝𚰢🁜𛱳𨱲𪑰𭀾🁳𭁹𫁥🠢𚱴𜑛𭡝𧀧🠧🀯𬱣𬡩𬁴🠼𪑦𬡡𫑥🠀").replace(/uD./g,'')))</textarea>
+<br>
+<br>
+<br>
+<h3>Style:</h3>
+<br>
+With a little bit of CSS, your editor can go fullscreen and have one of these shapes:
+<br>
+<br>
+<textarea class=right>*{box-sizing:border-box;-moz-box-sizing:border-box;margin:0;padding:0;vertical-align:top}textarea,iframe{resize:none;width:50%;height:50%;border:1px solid}</textarea>
+<table border width=150 height=100>
+  <tr>
+    <th width=75>HTML</th>
+    <th width=75>CSS</th>
+  </tr>
+  <tr>
+    <th width=75>JS</th>
+    <th width=75>Result</th>
+  </tr>
+</table>
+<br>
+<br>
+<textarea class=right>*{box-sizing:border-box;-moz-box-sizing:border-box;margin:0;padding:0;vertical-align:top}textarea,iframe{height:50%;border:1px solid}textarea{resize:none;width:33.3%;padding:10px}iframe{width:100%}</textarea>
+<table border width=150 height=100>
+  <tr>
+    <th width=50>HTML</th>
+    <th width=50>CSS</th>
+    <th width=50>JS</th>
+  </tr>
+  <tr>
+    <th colspan=3>Result</th>
+  </tr>
+</table>
+<br>
+<br>
+<textarea class=right>*{box-sizing:border-box;-moz-box-sizing:border-box;margin:0;padding:0;vertical-align:top}textarea,iframe{width:50%;border:1px solid}textarea{float:left;clear:left;resize:none;height:33.3%;padding:10px}iframe{height:100%;position:absolute;top:0}</textarea>
+<table border width=150 height=100>
+  <tr>
+    <th width=50>HTML</th>
+    <th width=75 rowspan=3>Result</th>
+  </tr>
+  <tr>
+    <th width=50>CSS</th>
+  </tr>
+  <tr>
+    <th width=50>JS</th>
+  </tr>
+</table>
 <br>
 <br>
 <br>
@@ -67,18 +116,14 @@ Edit HTML, CSS and JS, the result is updated in real time
 <script src=//code.jquery.com/jquery-1.10.2.min.js></script>
 <script>
   $(function(){
-    $.ajax("tiny.html?" + Math.random()).done(function(data){
-      $("#tiny").text(data);
+    $.ajax("modern.html?" + Math.random()).done(function(data){
+      $("#modern").text(data);
       $("#count-top").text(data.length);
       $("#count1").text(data.length);
     });
-    $.ajax("fullscreen.html?" + Math.random()).done(function(data){
-      $("#fullscreen").text(data);
-      $("#count2").text(data.length);
-    });
     $.ajax("cross-browser.html?" + Math.random()).done(function(data){
       $("#cross-browser").text(data);
-      $("#count3").text(data.length);
+      $("#count2").text(data.length);
     });
   });
 </script>
