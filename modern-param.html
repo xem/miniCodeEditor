@@ -1,1 +1,1 @@
-<x id=e><script>onload=oninput=function(){l.hash=[j=t1[v="value"],c=t2[v],h=t3[v]].map(escape);e.lastChild.srcdoc=h+"<script>"+j+"<\/script><style>"+c};for(i=3;i;)e.innerHTML+="<textarea id=t"+i+" rows=9>"+unescape([(l=location).hash.split(/#|,/)[i--]])</script><iframe>
+<body oninput='l.hash=[j=t1[v="value"],c=t2[v],h=t3[v]].map(btoa);e.lastChild.srcdoc=h+"<script>"+j+"<\/script><style>"+c'onload='for(i=4;i--;)e.innerHTML+=i?"<textarea id=t"+i+" rows=9>"+atob([(l=location).hash.split(/#|,/)[i]]):"<iframe>";e.oninput()'id=e>
