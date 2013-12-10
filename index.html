@@ -1,37 +1,43 @@
 <meta charset=utf-8>
 <style>
-  h1, h2 { text-align: center; }
-  h1 { font-size: 40px; }
-  h2 { font-size: 28px; }
-  h3 { font-size: 24px; }
-  body { width: 680px; margin: 20px auto; font-family: arial; }
-  textarea { height: 70px; background: #def; padding: 5px; width: 680px; font-family: monospace; overflow: hidden; resize: none; }
-  textarea.right { float: right; background: #ffa; height: 90px; padding: 5px; width: 500px; font-family: monospace; overflow: hidden; resize: none; }
+  body { width: 890px; margin: 20px auto; font-family: arial; }
+  h1, h2, h3, h4 { text-align: center; margin: 0; line-height: 40px; }
+  h1 { font: bold 60px monospace; }
+  sup { font: normal 20px arial; }
+  h2 { font: bold 30px; }
+  h3 { font-size: 24px; text-align: left; }
+  h4 { font-weight: normal; }
+  textarea { height: 70px; background: #def; padding: 5px; width: 890px; font-family: monospace; overflow: hidden; resize: none; }
+  textarea.right { float: right; background: #ffa; height: 80px; padding: 5px; width: 700px; font-family: monospace; overflow: hidden; resize: none; }
   a.right { float: right }
+  a { font-weight: bold }
+  iframe { border: none; }
 </style>
 <a href=//github.com/xem/miniCodeEditor><img style="position:absolute;top:0;right:0;border:0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-<h1>MiniCodeEditor</h1>
-<h2>A HTML/CSS/JavaScript code editor in <span id=count-top></span>+ bytes</h2>
-Golfed by <a href=//twitter.com/MaximeEuziere>xem</a>, <a href=//twitter.com/p01>p01</a></a>, <a href=//twitter.com/subzey>subzey</a>, <a href=//twitter.com/aemkei>aemkei</a>, <b>rlauck</b> and <b>bburky</b>
+<h1>MiniCodeEditor<sup> v.0.9</sup></h1>
+<h2>An online HTML/CSS/JavaScript code editor in 175+ bytes</h2>
+<h4>Inspired by <a href="//codepen.io">Codepen</a> & <a href="//jsfiddle.net">JSFiddle</a>, golfed by <a href=//twitter.com/MaximeEuziere>xem</a>, <a href=//twitter.com/p01>p01</a></a>, <a href=//twitter.com/subzey>subzey</a>, <a href=//twitter.com/aemkei>aemkei</a>, <b>rlauck</b> and <b>bburky</b></h4>
 <br>
 <br>
 <br>
 <br>
-<h3>Live demo:</h3>
-<br>
+<h3>Demo:</h3>
 Edit HTML, CSS and JS, the result is updated in real time
 <br>
 <br>
-<iframe src=demo.html width=680 height=300></iframe>
+<iframe src="modern-url.html#Ly8gSmF2YVNjcmlwdAoKd2hvLmlubmVySFRNTCA9IAoid29ybGQiOw==,LyogQ1NTICovCgpib2R5IHsKICBiYWNrZ3JvdW5kOiAjMjZBOwogIGNvbG9yOiAjZmZmOwogIGZvbnQ6IDMwcHggYXJpYWw7CiAgbGluZS1oZWlnaHQ6IDEzMHB4OwogIHRleHQtYWxpZ246IGNlbnRlcjsKfQ==,PCEtLSBIVE1MIC0tPgoKSGVsbG8sCjxiIGlkPSJ3aG8iPjwvYj4gIQ==" width=890 height=200></iframe>
 <br>
 <br>
-<h3>Source:</h3>
+<br>
+<br>
+<br>
+<h3>Source code:</h3>
 <br>
 <b>Modern</b> (Firefox 25+, Chrome 4+, Opera 15+) - <span id=count1></span> bytes
 <br>
 <br>
 <textarea id=modern resize=modern></textarea>
-<a class=right href=modern.html>Test / download</a>
+<a class=right href=cross-browser-.html>Test / download</a>
 <br>
 <br>
 <br>
