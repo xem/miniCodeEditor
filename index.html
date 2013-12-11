@@ -15,7 +15,7 @@
 </style>
 <a href=//github.com/xem/miniCodeEditor><img style="position:absolute;top:0;right:0;border:0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 <h1>MiniCodeEditor<sup> v.0.9</sup></h1>
-<h2>An online HTML/CSS/JavaScript code editor in 175+ bytes</h2>
+<h2>An online HTML/CSS/JavaScript code editor in <span id=count-top>175</span>+ bytes</h2>
 <h4>Inspired by <a href="//codepen.io">Codepen</a> & <a href="//jsfiddle.net">JSFiddle</a>, golfed by <a href=//twitter.com/MaximeEuziere>xem</a>, <a href=//twitter.com/p01>p01</a></a>, <a href=//twitter.com/subzey>subzey</a>, <a href=//twitter.com/aemkei>aemkei</a>, <b>rlauck</b> and <b>bburky</b></h4>
 <br>
 <br>
@@ -40,12 +40,26 @@ Edit HTML, CSS and JS, the result is updated in real time
 <a class=right href=modern.html>Test / download</a>
 <br>
 <br>
-<br>
 <b>Cross-browser</b> (Firefox, Chrome, Opera, Safari, IE6+) - <span id=count2></span> bytes
 <br>
 <br>
 <textarea id=cross-browser resize=none></textarea>
 <a class=right href=cross-browser.html>Test / download</a>
+<br>
+<br>
+<b>Modern, shareable via URL</b> (Firefox 25+, Chrome 4+, Opera 15+) - <span id=count3></span> bytes
+<br>
+<br>
+<textarea id=modern-url resize=modern></textarea>
+<a class=right href=modern-url.html>Test / download</a>
+<br>
+<br>
+<br>
+<b>Cross-browser, shareable via URL</b> (Firefox, Chrome, Opera, Safari, IE6+) - <span id=count4></span> bytes
+<br>
+<br>
+<textarea id=cross-browser-url resize=none></textarea>
+<a class=right href=cross-browser-url.html>Test / download</a>
 <br>
 <br>
 <br>
@@ -140,6 +154,14 @@ With a little bit of CSS, your editor can go fullscreen and have one of these sh
     $.ajax("cross-browser.html?" + Math.random()).done(function(data){
       $("#cross-browser").text(data);
       $("#count2").text(data.length);
+    });
+    $.ajax("modern-url.html?" + Math.random()).done(function(data){
+      $("#modern-url").text(data);
+      $("#count3").text(data.length);
+    });
+    $.ajax("cross-browser-url.html?" + Math.random()).done(function(data){
+      $("#cross-browser-url").text(data);
+      $("#count4").text(data.length);
     });
   });
 </script>
