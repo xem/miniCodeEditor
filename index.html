@@ -1,167 +1,202 @@
 <meta charset=utf-8>
 <style>
   body { width: 890px; margin: 20px auto; font-family: arial; }
-  h1, h2, h3, h4 { text-align: center; margin: 0; line-height: 40px; }
-  h1 { font: bold 60px monospace; }
+  h1, h2, h3, h4 { text-align: center; margin: 0; }
+  h1 { font: bold 60px monospace; line-height: 50px; }
   sup { font: normal 20px arial; }
-  h2 { font: bold 30px; }
-  h3 { font-size: 24px; text-align: left; }
-  h4 { font-weight: normal; }
-  textarea { height: 80px; background: #def; padding: 5px; width: 900px; font-family: monospace; overflow: hidden; resize: none; }
-  textarea.right { float: right; background: #ffa; height: 80px; padding: 5px; width: 700px; font-family: monospace; overflow: hidden; resize: none; }
+  h2 { font: bold 30px; line-height: 50px; }
+  h3 { font-size: 26px; text-align: left; }
+  h4 { font-weight: normal; line-height: 25px; }
+  textarea { height: 80px; padding: 5px; width: 850px; border: 2px solid #aaa; border-radius: 5px; font-family: monospace; overflow: hidden; resize: none; }
   .right { float: right }
-  a { font-weight: bold }
+  h4 a { font-weight: bold }
   iframe { border: none; }
+  td.align { width: 120px; }
+  td.align span { line-height: 60px; }
+  .style { float: left; margin: 25px 10px; }
+  .version:checked, .style:checked, .style:checked + table { box-shadow: 0 0 5px red }
+  table.style { font-size: 1px; border-collapse: collapse; margin: 10px 0; cursor: pointer; background: #fff; }
+  table.style th { border: 1px solid #000; }
+  label { font-weight: bold }
+  label span { font-weight: normal }
+  fieldset { padding: 20px; background: #eee; border: 5px solid #ccc; border-radius: 15px; }
 </style>
 <a href=//github.com/xem/miniCodeEditor><img style="position:absolute;top:0;right:0;border:0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-<h1>MiniCodeEditor<sup> v.0.9</sup></h1>
-<h2>An online HTML/CSS/JavaScript code editor in <span id=count-top>175</span>+ bytes</h2>
-<h4>Inspired by <a href="//codepen.io">Codepen</a> & <a href="//jsfiddle.net">JSFiddle</a>, golfed by <a href=//twitter.com/MaximeEuziere>xem</a>, <a href=//twitter.com/p01>p01</a></a>, <a href=//twitter.com/subzey>subzey</a>, <a href=//twitter.com/aemkei>aemkei</a>, <b>rlauck</b> and <b>bburky</b></h4>
+<h1>MiniCodeEditor<sup> v.0.99</sup></h1>
+<h2>An online HTML/CSS/JavaScript code editor in <span id=count-top>169</span>+ bytes</h2>
+<h4>Inspired by <a href="//codepen.io">Codepen</a>, <a href="//jsfiddle.net">JSFiddle</a> and <a href="//dabblet.com/">dabblet</a><br>golfed by <a href=//twitter.com/MaximeEuziere>xem</a>, <a href=//twitter.com/p01>p01</a></a>, <a href=//twitter.com/subzey>subzey</a>, <a href=//twitter.com/aemkei>aemkei</a>, <b>rlauck</b> and <b>bburky</b></h4>
 <br>
+<br>
+<br>
+<fieldset>
+  <h3>Source code:</h3>
+  <br>
+  <textarea id=code></textarea>
+  <br>
+  <br>
+  <br>
+  <b>Version:</b>
+  <br>
+  <br>
+  <label><input type=radio name=version class=version id=minimal checked> Minimal</label> (169 bytes - works on modern browsers) - <a href="minimal.html" id=link>permalink</a>
+  <br>
+  <label><input type=radio name=version class=version id=shareable> Shareable</label> (253 bytes - works on modern browsers, can be shared via the URL) - <a href="shareable.html" id=link>permalink</a>
+  <br>
+  <label><input type=radio name=version class=version id=complete> Complete</label> (330 bytes - works on all browsers, shareable, with placeholders) - <a href="complete.html" id=link>permalink</a>
+  <br>
+  <br>
+  <br>
+  <b>Style:</b> (coming soon)
+  <br>
+  <table>
+    <tr>
+      <td class=align>
+        <label>
+          <input type=radio name=style class=style id=small checked>
+          <table width=80 height=25 class=style style=margin-top:20px title="small, +7 bits">
+            <tr>
+              <th width=2>&nbsp;</th>
+              <th width=2>&nbsp;</th>
+              <th width=2>&nbsp;</th>
+              <th width=2>&nbsp;</th>
+            </tr>
+          </table>
+        </label>
+      </td>
+      <td class=align>
+        <label>
+          <input type=radio name=style class=style id=four_quarters>
+          <table width=50 height=50 class=style title="fullscreen, +xxx bits">
+            <tr>
+              <th width=25>&nbsp;</th>
+              <th width=25>&nbsp;</th>
+            </tr>
+            <tr>
+              <th width=25>&nbsp;</th>
+              <th width=25>&nbsp;</th>
+            </tr>
+          </table>
+        </label>
+      </td>
+      <td class=align>
+        <label>
+          <input type=radio name=style class=style id=top>
+          <table width=50 height=50 class=style title="fullscreen, +xxx bits">
+            <tr>
+              <th width=17>&nbsp;</th>
+              <th width=17>&nbsp;</th>
+              <th width=17>&nbsp;</th>
+            </tr>
+            <tr>
+              <th colspan=3>&nbsp;</th>
+            </tr>
+          </table>
+        </label>
+      </td>
+      <td class=align>
+        <label>
+          <input type=radio name=style class=style id=left>
+          <table width=50 height=50 class=style title="fullscreen, +xxx bits">
+            <tr>
+              <th width=25>&nbsp;</th>
+              <th width=25 rowspan=3>&nbsp;</th>
+            </tr>
+            <tr>
+              <th width=25>&nbsp;</th>
+            </tr>
+            <tr>
+              <th width=25>&nbsp;</th>
+            </tr>
+          </table>
+        </label>
+      </td>
+      <td class=align>
+        <label>
+          <input type=radio name=style class=style id=none> <span>None</span>
+        </label>
+      </td>
+    </tr>
+  </table>
+</fieldset>
 <br>
 <br>
 <br>
 <h3>Demo:</h3>
+<br>
 Edit HTML, CSS and JS, the result is updated in real time
 <br>
 <br>
-<iframe src="modern-url.html#Ly8gSmF2YVNjcmlwdAoKd2hvLmlubmVySFRNTCA9IAoid29ybGQiOw==,LyogQ1NTICovCgpib2R5IHsKICBiYWNrZ3JvdW5kOiAjMjZBOwogIGNvbG9yOiAjZmZmOwogIGZvbnQ6IDMwcHggYXJpYWw7CiAgbGluZS1oZWlnaHQ6IDEzMHB4OwogIHRleHQtYWxpZ246IGNlbnRlcjsKfQ==,PCEtLSBIVE1MIC0tPgoKSGVsbG8sCjxiIGlkPSJ3aG8iPjwvYj4gIQ==" width=890 height=200></iframe>
+<iframe src="complete.html#Ly8gSmF2YVNjcmlwdAoKd2hvLmlubmVySFRNTCA9IAoid29ybGQiOw==,LyogQ1NTICovCgpib2R5IHsKICBiYWNrZ3JvdW5kOiAjMjZBOwogIGNvbG9yOiAjZmZmOwogIGZvbnQ6IDMwcHggYXJpYWw7CiAgbGluZS1oZWlnaHQ6IDEzMHB4OwogIHRleHQtYWxpZ246IGNlbnRlcjsKfQ==,PCEtLSBIVE1MIC0tPgoKSGVsbG8sCjxiIGlkPSJ3aG8iPjwvYj4gIQ==" width=890 height=200></iframe>
 <br>
 <br>
 <br>
-<br>
-<br>
-<h3>Source code:</h3>
-<br>
-<b>Modern</b> (Firefox 25+, Chrome 4+, Opera 15+) - <span id=count1></span> bytes
-<br>
-<br>
-<textarea id=modern resize=modern></textarea>
-<a class=right href=modern.html>Test / download</a>
-<br>
-<br>
-<b>Cross-browser</b> (Firefox, Chrome, Opera, Safari, IE6+) - <span id=count2></span> bytes
-<br>
-<br>
-<textarea id=cross-browser resize=none></textarea>
-<a class=right href=cross-browser.html>Test / download</a>
-<br>
-<br>
-<b>Modern, shareable via URL</b> (Firefox 25+, Chrome 4+, Opera 15+) - <span id=count3></span> bytes
-<br>
-<br>
-<textarea id=modern-url resize=modern></textarea>
-<a class=right href=modern-url.html>Test / download</a>
-<br>
-<br>
-<br>
-<b>Cross-browser, shareable via URL</b> (Firefox, Chrome, Opera, Safari, IE6+) - <span id=count4></span> bytes
-<br>
-<br>
-<textarea id=cross-browser-url resize=none></textarea>
-<a class=right href=cross-browser-url.html>Test / download</a>
-<br>
-<br>
-<br>
-<br>
-<b>You can also put MiniCodeEditor in a tweet!</b> (140 characters)
-<br>
-<br>
-<textarea class=code>document.write(unescape(escape("🁢𫱤𮐠𫱮𪑮𬁵𭀽𙱥𛡦𪑲𬱴𠱨𪑬𩀮𬱲𨱤𫱣👴𜡛𭠽𘡶𨑬𭑥𘡝𚰢🁳𨱲𪑰𭀾𘠫𭀰𦱶𧐫𘠼𧀯𬱣𬡩𬁴🠼𬱴𮑬𩐾𘠫𭀱𦱶𧐧𫱮𫁯𨑤🐧𩡯𬠨𪐽𜰻𪐭𛐻𚑥𛡩𫡮𩑲𢁔𣑌𚰽𘠼𭁥𮁴𨑲𩑡𘁩𩀽𭀢𚱩𚰢𘁲𫱷𬰽𞐾𘠧𪑤👥🠼𪑦𬡡𫑥🠠").replace(/uD./g,'')))</textarea>
-<br>
-<span class=right>
-<a href="http://xem.github.io/?golfing">More info</a>
--
-<a href="tweet.html">Try it</a>
-</span>
-<br>
-<br>
-<h3>Style:</h3>
-<br>
-With a little bit of CSS, your editor can go fullscreen and have one of these shapes:
-<br>
-<br>
-<textarea class=right>*{box-sizing:border-box;-moz-box-sizing:border-box;margin:0;padding:0;vertical-align:top}textarea,iframe{resize:none;width:50%;height:50%;border:1px solid}</textarea>
-<table border width=150 height=100>
-  <tr>
-    <th width=75>HTML</th>
-    <th width=75>CSS</th>
-  </tr>
-  <tr>
-    <th width=75>JS</th>
-    <th width=75>Result</th>
-  </tr>
-</table>
-<br>
-<br>
-<textarea class=right>*{box-sizing:border-box;-moz-box-sizing:border-box;margin:0;padding:0;vertical-align:top}textarea,iframe{height:50%;border:1px solid}textarea{resize:none;width:33.3%;padding:10px}iframe{width:100%}</textarea>
-<table border width=150 height=100>
-  <tr>
-    <th width=50>HTML</th>
-    <th width=50>CSS</th>
-    <th width=50>JS</th>
-  </tr>
-  <tr>
-    <th colspan=3>Result</th>
-  </tr>
-</table>
-<br>
-<br>
-<textarea class=right>*{box-sizing:border-box;-moz-box-sizing:border-box;margin:0;padding:0;vertical-align:top}textarea,iframe{width:50%;border:1px solid}textarea{float:left;clear:left;resize:none;height:33.3%;padding:10px}iframe{height:100%;position:absolute;top:0}</textarea>
-<table border width=150 height=100>
-  <tr>
-    <th width=50>HTML</th>
-    <th width=75 rowspan=3>Result</th>
-  </tr>
-  <tr>
-    <th width=50>CSS</th>
-  </tr>
-  <tr>
-    <th width=50>JS</th>
-  </tr>
-</table>
-<br>
-<br>
-<br>
-<h3>Interesting Stuff:</h3>
-<br>
-- <b>The 140byt.es post</b> where it started: <a href="https://gist.github.com/xem/5124599">link</a>
-<br>
-- <b>The Hacker News</b> topic: <a href="https://news.ycombinator.com/item?id=6860642">link</a>
-<br>
-- <b>mdesantis</b> added placeholders (278 bytes): <a href="forks/placeholders.html">link</a>
-<br>
-- <b>err4nt</b> made a "Live Editor" with a great style: <a href=//github.com/tomhodgins/liveeditor>link</a>
-<br>
-- <b>Fileless</b>: copy "data:text/html," + the above source code in your browser's addressbar!
-<br>
-- <b>Other code golfing projects</b> from <a href="http://xem.github.io/?golfing">xem</a>, <a href="http://aem1k.com/">aemkei</a> and <a href="http://www.p01.org/releases/">p01</a>
-<br>
-- <b>People tweet</b> about this!
-<br>
-<br>
-<br>
-<a class="twitter-timeline"  href="https://twitter.com/search?q=miniCodeEditor"  data-widget-id="410486792807124992">Tweets concernant "miniCodeEditor"</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<fieldset>
+  <h3>Interesting Stuff:</h3>
+  <br>
+  - <b>Other code golfing projects</b> by <a href="http://xem.github.io/?golfing">xem</a>, <a href="http://aem1k.com/">aemkei</a> and <a href="http://www.p01.org/releases/">p01</a>
+  <br>
+  <br>
+  - <b>Live Editor</b>, a fork by err4nt with a great style: <a href=//github.com/tomhodgins/liveeditor>link</a>
+  <br>
+  <br>
+  - <b>MiniCodeEditor can fit in a tweet!</b> (140 characters) <a href="http://xem.github.io/?golfing">More info</a> - <a href="tweet.html">Demo</a>
+  <br>
+  <br>
+  - <b>A lot of people</b> <a href="https://twitter.com/search?q=miniCodeEditor">tweet</a> and <a href="https://news.ycombinator.com/item?id=6860642">talk</a> about this!
+</fieldset>
+
 <script src=//code.jquery.com/jquery-1.10.2.min.js></script>
 <script>
+  var text_code = "";
+  var text_style = "";
   $(function(){
-    $.ajax("modern.html?" + Math.random()).done(function(data){
-      $("#modern").text(data);
+    $.ajax("minimal.html?" + Math.random()).done(function(data){
+      text_code = data;
+      $("#code").text(data);
       $("#count-top").text(data.length);
-      $("#count1").text(data.length);
+      $("#minimal").click();
+      $("#small").click();
     });
-    $.ajax("cross-browser.html?" + Math.random()).done(function(data){
-      $("#cross-browser").text(data);
-      $("#count2").text(data.length);
+    
+    $("#minimal").click(function(){
+      $.ajax("minimal.html?" + Math.random()).done(function(data){
+        text_code = data;
+        $("#code").text(text_code + text_style);
+      });
     });
-    $.ajax("modern-url.html?" + Math.random()).done(function(data){
-      $("#modern-url").text(data);
-      $("#count3").text(data.length);
+    
+    $("#shareable").click(function(){
+      $.ajax("shareable.html?" + Math.random()).done(function(data){
+        text_code = data;
+        $("#code").text(text_code + text_style);
+      });
     });
-    $.ajax("cross-browser-url.html?" + Math.random()).done(function(data){
-      $("#cross-browser-url").text(data);
-      $("#count4").text(data.length);
+    
+    $("#complete").click(function(){
+      $.ajax("complete.html?" + Math.random()).done(function(data){
+        text_code = data;
+        $("#code").text(text_code + text_style);
+      });
+    });
+    
+    $("#none").click(function(){
+      text_style = "";
+      $("#code").text(text_code + text_style);
+    });
+    
+    $("#four_quarters").click(function(){
+      //text_style = "<style>1</style>";
+      $("#code").text(text_code + text_style);
+    });
+    
+    $("#top").click(function(){
+      //text_style = "<style>2</style>";
+      $("#code").text(text_code + text_style);
+    });
+    
+    $("#left").click(function(){
+      //text_style = "<style>3</style>";
+      $("#code").text(text_code + text_style);
     });
   });
 </script>
