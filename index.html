@@ -2,12 +2,12 @@
 <style>
   body { width: 890px; margin: 20px auto; font-family: arial; }
   h1, h2, h3, h4 { text-align: center; margin: 0; }
-  h1 { font: bold 60px monospace; line-height: 50px; }
+  h1 { font: bold 60px monospace; line-height: 60px; }
   sup { font: normal 20px arial; }
-  h2 { font: bold 30px; line-height: 50px; }
+  h2 { font: bold 30px; line-height: 60px; }
   h3 { font-size: 26px; text-align: left; }
-  h4 { font-weight: normal; line-height: 25px; }
-  textarea { height: 80px; padding: 5px; width: 850px; border: 2px solid #aaa; border-radius: 5px; font-family: monospace; overflow: hidden; resize: none; }
+  h4 { font-weight: normal; line-height: 40px; }
+  pre { height: auto; padding: 5px; width: 850px; border: 2px solid #aaa; background: #fff; border-radius: 5px; font-family: monospace; overflow: hidden; resize: none; 	white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word; margin: 0 0 5px; }
   .right { float: right }
   h4 a { font-weight: bold }
   iframe { border: none; }
@@ -22,43 +22,50 @@
   fieldset { padding: 20px; background: #eee; border: 5px solid #ccc; border-radius: 15px; }
 </style>
 <a href=//github.com/xem/miniCodeEditor><img style="position:absolute;top:0;right:0;border:0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-<h1>MiniCodeEditor<sup> v.0.99</sup></h1>
-<h2>An online HTML/CSS/JavaScript code editor in <span id=count-top>169</span>+ bytes</h2>
+<h1>MiniCodeEditor<sup> v.1.0</sup></h1>
+<h2>An online HTML/CSS/JavaScript code editor in <span>162</span>+ bytes</h2>
 <h4>Inspired by <a href="//codepen.io">Codepen</a>, <a href="//jsfiddle.net">JSFiddle</a> and <a href="//dabblet.com/">dabblet</a><br>golfed by <a href=//twitter.com/MaximeEuziere>xem</a>, <a href=//twitter.com/p01>p01</a></a>, <a href=//twitter.com/subzey>subzey</a>, <a href=//twitter.com/aemkei>aemkei</a>, <b>rlauck</b> and <b>bburky</b></h4>
 <br>
+<br>
+<hr>
+<br>
+<h3>Demo:</h3>
+<br>
+Edit HTML, CSS and JS, the result is updated in real time
+<br>
+<br>
+<iframe src="complete.html#Ly8gSmF2YVNjcmlwdAoKd2hvLmlubmVySFRNTCA9IAoid29ybGQiOw==,LyogQ1NTICovCgpib2R5IHsKICBiYWNrZ3JvdW5kOiAjMjZBOwogIGNvbG9yOiAjZmZmOwogIGZvbnQ6IDMwcHggYXJpYWw7CiAgbGluZS1oZWlnaHQ6IDEzMHB4OwogIHRleHQtYWxpZ246IGNlbnRlcjsKfQ==,PCEtLSBIVE1MIC0tPgoKSGVsbG8sCjxiIGlkPSJ3aG8iPjwvYj4gIQ==" width=890 height=200></iframe>
 <br>
 <br>
 <fieldset>
   <h3>Source code:</h3>
   <br>
-  <textarea id=code></textarea>
-  <br>
-  <br>
+  <pre id=code></pre>
+  <span class=right id=count>169 bytes</span>
   <br>
   <b>Version:</b>
   <br>
   <br>
-  <label><input type=radio name=version class=version id=minimal checked> Minimal</label> (169 bytes - works on modern browsers) - <a href="minimal.html" id=link>permalink</a>
+  <label><input type=radio name=version class=version id=minimal checked> Minimal</label> (162 bytes - works on modern browsers) - <a href="minimal.html" id=link>permalink</a>
   <br>
-  <label><input type=radio name=version class=version id=shareable> Shareable</label> (253 bytes - works on modern browsers, can be shared via the URL) - <a href="shareable.html" id=link>permalink</a>
+  <label><input type=radio name=version class=version id=shareable> Shareable</label> (246 bytes - works on modern browsers, can be shared via the URL) - <a href="shareable.html" id=link>permalink</a>
   <br>
-  <label><input type=radio name=version class=version id=complete> Complete</label> (330 bytes - works on all browsers, shareable, with placeholders) - <a href="complete.html" id=link>permalink</a>
+  <label><input type=radio name=version class=version id=complete> Complete</label> (323 bytes - works on all browsers, shareable, with placeholders) - <a href="complete.html" id=link>permalink</a>
   <br>
   <br>
-  <br>
-  <b>Style:</b> (coming soon)
+  <b>Style:</b>
   <br>
   <table>
     <tr>
       <td class=align>
         <label>
           <input type=radio name=style class=style id=small checked>
-          <table width=80 height=25 class=style style=margin-top:20px title="small, +7 bits">
+          <table width=60 height=20 class=style style=margin-top:22px title="small, +7 bits">
             <tr>
-              <th width=2>&nbsp;</th>
-              <th width=2>&nbsp;</th>
-              <th width=2>&nbsp;</th>
-              <th width=2>&nbsp;</th>
+              <th bgcolor=tan>&nbsp;</th>
+              <th>&nbsp;</th>
+              <th>&nbsp;</th>
+              <th>&nbsp;</th>
             </tr>
           </table>
         </label>
@@ -66,14 +73,14 @@
       <td class=align>
         <label>
           <input type=radio name=style class=style id=four_quarters>
-          <table width=50 height=50 class=style title="fullscreen, +xxx bits">
+          <table width=50 height=50 class=style title="fullscreen, +203 bits">
             <tr>
               <th width=25>&nbsp;</th>
               <th width=25>&nbsp;</th>
             </tr>
             <tr>
               <th width=25>&nbsp;</th>
-              <th width=25>&nbsp;</th>
+              <th width=25 bgcolor=tan>&nbsp;</th>
             </tr>
           </table>
         </label>
@@ -81,14 +88,14 @@
       <td class=align>
         <label>
           <input type=radio name=style class=style id=top>
-          <table width=50 height=50 class=style title="fullscreen, +xxx bits">
+          <table width=50 height=50 class=style title="fullscreen, +190 bits">
             <tr>
               <th width=17>&nbsp;</th>
               <th width=17>&nbsp;</th>
               <th width=17>&nbsp;</th>
             </tr>
             <tr>
-              <th colspan=3>&nbsp;</th>
+              <th colspan=3 bgcolor=tan>&nbsp;</th>
             </tr>
           </table>
         </label>
@@ -96,10 +103,42 @@
       <td class=align>
         <label>
           <input type=radio name=style class=style id=left>
-          <table width=50 height=50 class=style title="fullscreen, +xxx bits">
+          <table width=50 height=50 class=style title="fullscreen, +217 bits">
             <tr>
               <th width=25>&nbsp;</th>
-              <th width=25 rowspan=3>&nbsp;</th>
+              <th width=25 rowspan=3 bgcolor=tan>&nbsp;</th>
+            </tr>
+            <tr>
+              <th width=25>&nbsp;</th>
+            </tr>
+            <tr>
+              <th width=25>&nbsp;</th>
+            </tr>
+          </table>
+        </label>
+      </td>
+      <td class=align>
+        <label>
+          <input type=radio name=style class=style id=bottom>
+          <table width=50 height=50 class=style title="fullscreen, +202 bits">
+            <tr>
+              <th colspan=3 bgcolor=tan>&nbsp;</th>
+            </tr>
+            <tr>
+              <th width=17>&nbsp;</th>
+              <th width=17>&nbsp;</th>
+              <th width=17>&nbsp;</th>
+            </tr>
+          </table>
+        </label>
+      </td>
+      <td class=align>
+        <label>
+          <input type=radio name=style class=style id=right>
+          <table width=50 height=50 class=style title="fullscreen, +xxx bits">
+            <tr>
+              <th width=25 rowspan=3 bgcolor=tan>&nbsp;</th>
+              <th width=25>&nbsp;</th>
             </tr>
             <tr>
               <th width=25>&nbsp;</th>
@@ -120,83 +159,107 @@
 </fieldset>
 <br>
 <br>
+<h3>Interesting Stuff:</h3>
 <br>
-<h3>Demo:</h3>
-<br>
-Edit HTML, CSS and JS, the result is updated in real time
-<br>
-<br>
-<iframe src="complete.html#Ly8gSmF2YVNjcmlwdAoKd2hvLmlubmVySFRNTCA9IAoid29ybGQiOw==,LyogQ1NTICovCgpib2R5IHsKICBiYWNrZ3JvdW5kOiAjMjZBOwogIGNvbG9yOiAjZmZmOwogIGZvbnQ6IDMwcHggYXJpYWw7CiAgbGluZS1oZWlnaHQ6IDEzMHB4OwogIHRleHQtYWxpZ246IGNlbnRlcjsKfQ==,PCEtLSBIVE1MIC0tPgoKSGVsbG8sCjxiIGlkPSJ3aG8iPjwvYj4gIQ==" width=890 height=200></iframe>
+- <b>Other code golfing projects</b> by <a href="http://xem.github.io/?golfing">xem</a>, <a href="http://aem1k.com/">aemkei</a> and <a href="http://www.p01.org/releases/">p01</a>
 <br>
 <br>
+- <b>Live Editor</b>, a fork by err4nt with a great style: <a href=//github.com/tomhodgins/liveeditor>link</a>
 <br>
-<fieldset>
-  <h3>Interesting Stuff:</h3>
-  <br>
-  - <b>Other code golfing projects</b> by <a href="http://xem.github.io/?golfing">xem</a>, <a href="http://aem1k.com/">aemkei</a> and <a href="http://www.p01.org/releases/">p01</a>
-  <br>
-  <br>
-  - <b>Live Editor</b>, a fork by err4nt with a great style: <a href=//github.com/tomhodgins/liveeditor>link</a>
-  <br>
-  <br>
-  - <b>MiniCodeEditor can fit in a tweet!</b> (140 characters) <a href="http://xem.github.io/?golfing">More info</a> - <a href="tweet.html">Demo</a>
-  <br>
-  <br>
-  - <b>A lot of people</b> <a href="https://twitter.com/search?q=miniCodeEditor">tweet</a> and <a href="https://news.ycombinator.com/item?id=6860642">talk</a> about this!
-</fieldset>
+<br>
+- <b>MiniCodeEditor can fit in a tweet!</b> (140 characters) <a href="http://xem.github.io/?golfing">More info</a> - <a href="tweet.html">Demo</a>
+<br>
+<br>
+- <b>A lot of people</b> <a href="https://twitter.com/search?q=miniCodeEditor">tweet</a> and <a href="https://news.ycombinator.com/item?id=6860642">talk</a> about this!
 
 <script src=//code.jquery.com/jquery-1.10.2.min.js></script>
 <script>
-  var text_code = "";
+  var text_code_minimal = "";
+  var text_code_shareable = "";
+  var text_code_complete = "";
+  var text_rows = " rows=9";
   var text_style = "";
   $(function(){
+    
+    // On load
     $.ajax("minimal.html?" + Math.random()).done(function(data){
-      text_code = data;
+      text_code_minimal = data;
       $("#code").text(data);
-      $("#count-top").text(data.length);
+      $("#count-top").text(data.length - text_rows.length);
       $("#minimal").click();
       $("#small").click();
     });
     
+    $.ajax("shareable.html?" + Math.random()).done(function(data){
+      text_code_shareable = data;
+    });
+    
+    $.ajax("complete.html?" + Math.random()).done(function(data){
+      text_code_complete = data;
+    });
+    
+    // On click    
     $("#minimal").click(function(){
-      $.ajax("minimal.html?" + Math.random()).done(function(data){
-        text_code = data;
-        $("#code").text(text_code + text_style);
-      });
+      text_code = text_code_minimal;
+      $("#code").text(text_code + text_style);
+      $("#count").text((text_code + text_style).length + " bytes");
+      $("#small").click();
     });
     
     $("#shareable").click(function(){
-      $.ajax("shareable.html?" + Math.random()).done(function(data){
-        text_code = data;
-        $("#code").text(text_code + text_style);
-      });
+      text_code = text_code_shareable;
+      $("#code").text(text_code + text_style);
+      $("#count").text((text_code + text_style).length + " bytes");
+      $("#small").click();
     });
     
     $("#complete").click(function(){
-      $.ajax("complete.html?" + Math.random()).done(function(data){
-        text_code = data;
-        $("#code").text(text_code + text_style);
-      });
+      text_code = text_code_complete;
+      $("#code").text(text_code + text_style);
+      $("#count").text((text_code + text_style).length + " bytes");
+      $("#small").click();
+    });
+
+    $("#small").click(function(){
+      text_style = "";
+      $("#code").text((text_code + text_style));
+      $("#count").text((text_code + text_style).length + " bytes");
+    });
+    
+    $("#four_quarters").click(function(){
+      text_style = "</iframe><style>*{box-sizing:border-box;-moz-box-sizing:border-box;margin:0;vertical-align:top}textarea,iframe{resize:none;width:50%;height:50%;border:1px solid}iframe{position:absolute;bottom:0;right:0}";
+      $("#code").text((text_code + text_style).replace(text_rows, ""));
+      $("#count").text((text_code + text_style).replace(text_rows, "").length + " bytes");
+    });
+    
+    $("#top").click(function(){
+      text_style = "</iframe><style>*{box-sizing:border-box;-moz-box-sizing:border-box;margin:0;vertical-align:top}textarea,iframe{height:50%;border:1px solid}textarea{resize:none;width:33.3%}iframe{width:100%}";
+      $("#code").text((text_code + text_style).replace(text_rows, ""));
+      $("#count").text((text_code + text_style).replace(text_rows, "").length + " bytes");
+    });
+    
+    $("#left").click(function(){
+      text_style = "</iframe><style>*{box-sizing:border-box;-moz-box-sizing:border-box;margin:0;vertical-align:top}textarea,iframe{width:50%;border:1px solid}textarea{float:left;clear:left;resize:none;height:33.3%}iframe{height:100%;position:absolute;top:0}";
+      $("#code").text((text_code + text_style).replace(text_rows, ""));
+      $("#count").text((text_code + text_style).replace(text_rows, "").length + " bytes");
+    });
+    
+    $("#bottom").click(function(){
+      text_style = "</iframe><style>*{box-sizing:border-box;-moz-box-sizing:border-box;margin:0;vertical-align:top}textarea,iframe{height:50%;border:1px solid}textarea{resize:none;width:33.3%}iframe{width:100%;position:absolute;bottom:0}";
+      $("#code").text((text_code + text_style).replace(text_rows, ""));
+      $("#count").text((text_code + text_style).replace(text_rows, "").length + " bytes");
+    });
+
+    $("#right").click(function(){
+      text_style = "</iframe><style>*{box-sizing:border-box;-moz-box-sizing:border-box;margin:0;vertical-align:top}textarea,iframe{width:50%;border:1px solid}textarea{resize:none;height:33.3%}iframe{height:100%;float:left}";
+      $("#code").text((text_code + text_style).replace(text_rows, ""));
+      $("#count").text((text_code + text_style).replace(text_rows, "").length + " bytes");
     });
     
     $("#none").click(function(){
       text_style = "";
-      $("#code").text(text_code + text_style);
-    });
-    
-    $("#four_quarters").click(function(){
-      //text_style = "<style>1</style>";
-      $("#code").text(text_code + text_style);
-    });
-    
-    $("#top").click(function(){
-      //text_style = "<style>2</style>";
-      $("#code").text(text_code + text_style);
-    });
-    
-    $("#left").click(function(){
-      //text_style = "<style>3</style>";
-      $("#code").text(text_code + text_style);
+      $("#code").text((text_code + text_style).replace(text_rows, ""));
+      $("#count").text((text_code + text_style).replace(text_rows, "").length + " bytes");
     });
   });
 </script>
