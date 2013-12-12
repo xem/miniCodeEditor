@@ -20,6 +20,9 @@
   label { font-weight: bold }
   label span { font-weight: normal }
   fieldset { padding: 20px; background: #eee; border: 5px solid #ccc; border-radius: 15px; }
+  .buttons { text-align: center; }
+  .buttons a { display: inline-block; color: #000; text-decoration: none; width: 200px; font-size: 25px; font-weight: bold; line-height: 50px; background: #def; border: 2px solid #abc; border-radius: 10px; }
+  .buttons a.important { cursor: pointer; background: #159; border: 2px solid #26a; color: #fff; border-radius: 10px; }
 </style>
 <a href=//github.com/xem/miniCodeEditor><img style="position:absolute;top:0;right:0;border:0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 <h1>MiniCodeEditor<sup> v.1.0</sup></h1>
@@ -27,7 +30,19 @@
 <h4>Inspired by <a href="//codepen.io">Codepen</a>, <a href="//jsfiddle.net">JSFiddle</a> and <a href="//dabblet.com/">dabblet</a><br>golfed by <a href=//twitter.com/MaximeEuziere>xem</a>, <a href=//twitter.com/p01>p01</a></a>, <a href=//twitter.com/subzey>subzey</a>, <a href=//twitter.com/aemkei>aemkei</a>, <b>rlauck</b> and <b>bburky</b></h4>
 <br>
 <br>
-<hr>
+<br>
+<br>
+<br>
+<br>
+<div class=buttons>
+  <a href=# class=important onclick="alert('When you\'re done, just copy the URL to share your work!');location='prod'">Launch</a>
+  <a href="#custom">Customize</a>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <h3>Demo:</h3>
 <br>
@@ -37,7 +52,12 @@ Edit HTML, CSS and JS, the result is updated in real time
 <iframe src="complete.html#Ly8gSmF2YVNjcmlwdAoKd2hvLmlubmVySFRNTCA9IAoid29ybGQiOw==,LyogQ1NTICovCgpib2R5IHsKICBiYWNrZ3JvdW5kOiAjMjZBOwogIGNvbG9yOiAjZmZmOwogIGZvbnQ6IDMwcHggYXJpYWw7CiAgbGluZS1oZWlnaHQ6IDEzMHB4OwogIHRleHQtYWxpZ246IGNlbnRlcjsKfQ==,PCEtLSBIVE1MIC0tPgoKSGVsbG8sCjxiIGlkPSJ3aG8iPjwvYj4gIQ==" width=890 height=200></iframe>
 <br>
 <br>
-<fieldset>
+<br>
+<br>
+<br>
+<br>
+<br>
+<fieldset id=custom>
   <h3>Source code:</h3>
   <br>
   <pre id=code></pre>
@@ -159,12 +179,19 @@ Edit HTML, CSS and JS, the result is updated in real time
 </fieldset>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
 <h3>Interesting Stuff:</h3>
 <br>
 - <b>Other code golfing projects</b> by <a href="http://xem.github.io/?golfing">xem</a>, <a href="http://aem1k.com/">aemkei</a> and <a href="http://www.p01.org/releases/">p01</a>
 <br>
 <br>
 - <b>Live Editor</b>, a fork by err4nt with a great style: <a href=//github.com/tomhodgins/liveeditor>link</a>
+<br>
+<br>
+- <b>HTML5 Weekly</b> mentioned this: <a href="http://html5weekly.com/archive/117.html">link</a>
 <br>
 <br>
 - <b>Blogs talk about this</b> in <a href="http://beben-koben.blogspot.fr/2013/12/get-free-two-html-editor-simplest-and-usefully.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+beben-koben+%28Tutorial+Blog+for+Stylish+Blogger%29">Indonesian</a>, <a href="http://www.softantenna.com/wp/webservice/mini-code-editor/?utm_source=rss&utm_medium=rss&utm_campaign=mini-code-editor">Japanese</a>, <a href="http://www.1337core.de/minicodeeditor-in-230-bytes-im-browser/">German</a>, <a href="http://habrahabr.ru/company/nordavind/blog/205154/">Russian</a>, <a href="http://www.restonschauds.com/blog/index.html?article=882">French</a>...
