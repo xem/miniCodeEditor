@@ -8,6 +8,7 @@
   h3 { font-size: 26px; text-align: left; }
   h4 { font-weight: normal; line-height: 40px; }
   pre { margin: 0 auto 5px; height: auto; padding: 5px; width: 820px; border: 2px solid #aaa; background: #fff; border-radius: 5px; font-family: monospace; overflow: hidden; resize: none; 	white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word }
+  pre.intro { cursor: pointer; width: 700px; text-align: center; margin: 0 auto; }
   .right { float: right }
   h4 a { font-weight: bold }
   iframe { border: none; }
@@ -21,12 +22,17 @@
   label span { font-weight: normal }
   fieldset { padding: 20px; background: #eee; border: 5px solid #ccc; border-radius: 15px; }
   .buttons { text-align: center; }
-  .buttons a { display: inline-block; color: #000; text-decoration: none; width: 200px; font-size: 25px; font-weight: bold; line-height: 50px; background: #def; border: 2px solid #abc; border-radius: 10px; }
+  .buttons a { display: inline-block; color: #000; text-decoration: none; font-size: 25px; padding: 15px 30px; margin: 0 10px; font-weight: bold; line-height: 25px; background: #def; border: 2px solid #abc; border-radius: 10px; }
+  .buttons a div { font-size: 12px; line-height: 12px; }
   .buttons a.important { cursor: pointer; background: #159; border: 2px solid #26a; color: #fff; border-radius: 10px; }
 </style>
 <a href=//github.com/xem/miniCodeEditor><img style="position:absolute;top:0;right:0;border:0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 <h1>MiniCodeEditor<sup> v.1.0</sup></h1>
 <h2>An online HTML/CSS/JavaScript code editor in <span>162</span>+ bytes</h2>
+<br>
+<pre onclick="location=#custom" class=intro>&lt;body oninput='e.firstChild.srcdoc=t2[v="value"]+"&lt;script>"+t0[v]+"&lt;\/script>&lt;style>"+t1[v]'onload='for(i=3;i--;)e.innerHTML+="&lt;textarea id=t"+i+">"'id=e>&lt;iframe></pre>
+<br>
+<br>
 <h4>Inspired by <a href="//codepen.io">Codepen</a>, <a href="//jsfiddle.net">JSFiddle</a> and <a href="//dabblet.com/">dabblet</a><br>golfed by <a href=//twitter.com/MaximeEuziere>xem</a>, <a href=//twitter.com/p01>p01</a></a>, <a href=//twitter.com/subzey>subzey</a>, <a href=//twitter.com/aemkei>aemkei</a>, <b>rlauck</b> and <b>bburky</b></h4>
 <br>
 <br>
@@ -35,8 +41,8 @@
 <br>
 <br>
 <div class=buttons>
-  <a href=# class=important onclick="alert('When you\'re done, just copy the URL to share your work!');location='prod'">Launch</a>
-  <a href="#custom">Customize</a>
+  <a href=# class=important onclick="alert('When you\'re done, just copy the URL to share your work!');window.open('prod','','directories=no, menubar=no, status=no, scrollbars=no, fullscreen=yes')">Launch<div>the full-featured version</div></a>
+  <a href="#custom">Customize<div>and download</div></a>
 </div>
 <br>
 <br>
@@ -55,9 +61,9 @@ Edit HTML, CSS and JS, the result is updated in real time
 <br>
 <br>
 <br>
+<br id=custom>
 <br>
-<br>
-<fieldset id=custom>
+<fieldset>
   <h3>Source code:</h3>
   <br>
   <pre id=code></pre>
@@ -66,11 +72,11 @@ Edit HTML, CSS and JS, the result is updated in real time
   <b>Version:</b>
   <br>
   <br>
-  <label><input type=radio name=version class=version id=minimal checked> Minimal</label> (162 bytes - works on modern browsers) - <a href="minimal.html" id=link>permalink</a>
+  <label><input type=radio name=version class=version id=minimal checked> Minimal</label> (162 bytes - works on modern browsers) - <a href="minimal.html" id=link>try it</a>
   <br>
-  <label><input type=radio name=version class=version id=shareable> Shareable</label> (246 bytes - works on modern browsers, can be shared via the URL) - <a href="shareable.html" id=link>permalink</a>
+  <label><input type=radio name=version class=version id=shareable> Shareable</label> (246 bytes - works on modern browsers, can be shared via the URL) - <a href="shareable.html" id=link>try it</a>
   <br>
-  <label><input type=radio name=version class=version id=complete> Complete</label> (323 bytes - works on all browsers, shareable, with placeholders) - <a href="complete.html" id=link>permalink</a>
+  <label><input type=radio name=version class=version id=complete> Complete</label> (323 bytes - works on all browsers, shareable, with placeholders) - <a href="complete.html" id=link>try it</a>
   <br>
   <br>
   <b>Style:</b>
@@ -191,16 +197,19 @@ Edit HTML, CSS and JS, the result is updated in real time
 - <b>Live Editor</b>, a fork by err4nt with a great style: <a href=//github.com/tomhodgins/liveeditor>link</a>
 <br>
 <br>
+- <b>miniCodeInception</b>: <a href="http://xem.github.io/miniCodeEditor/prod/#,,PGJvZHkgb25rZXl1cD0nbC5oYXNoPVtqPXQxW3Y9InZhbHVlIl0sYz10Mlt2XSxoPXQzW3ZdXS5tYXAoYnRvYSk7KEQ9ZS5maXJzdENoaWxkLmNvbnRlbnRXaW5kb3cuZG9jdW1lbnQpLndyaXRlKGh8fGN8fGo/aCsiPHNjcmlwdD4iK2orIjxcL3NjcmlwdD48c3R5bGU+IitjOiI8cHJlPlJlc3VsdCIpO0QuY2xvc2UoKSdvbmxvYWQ9J2ZvcihpPTQ7LS1pO2UuaW5uZXJIVE1MKz0iPHRleHRhcmVhIGlkPXQiK2krIiBwbGFjZWhvbGRlcj0iK1ssIkpTIiwiQ1NTIiwiSFRNTCJdW2ldKyI+IithdG9iKFtsLmhhc2guc3BsaXQoLyN8LC8pW2ldXSkpbD1sb2NhdGlvbjtlLm9ua2V5dXAoKSdpZD1lPjxpZnJhbWU+PC9pZnJhbWU+PHN0eWxlPip7Ym94LXNpemluZzpib3JkZXItYm94Oy1tb3otYm94LXNpemluZzpib3JkZXItYm94O21hcmdpbjowO3ZlcnRpY2FsLWFsaWduOnRvcH10ZXh0YXJlYSxpZnJhbWV7aGVpZ2h0OjUwJTtib3JkZXI6MXB4IHNvbGlkfXRleHRhcmVhe3Jlc2l6ZTpub25lO3dpZHRoOjMzLjMlfWlmcmFtZXt3aWR0aDoxMDAlfQ==">link</a>
+<br>
+<br>
 - <b>HTML5 Weekly</b> mentioned this: <a href="http://html5weekly.com/archive/117.html">link</a>
 <br>
 <br>
 - <b>Blogs talk about this</b> in <a href="http://beben-koben.blogspot.fr/2013/12/get-free-two-html-editor-simplest-and-usefully.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+beben-koben+%28Tutorial+Blog+for+Stylish+Blogger%29">Indonesian</a>, <a href="http://www.softantenna.com/wp/webservice/mini-code-editor/?utm_source=rss&utm_medium=rss&utm_campaign=mini-code-editor">Japanese</a>, <a href="http://www.1337core.de/minicodeeditor-in-230-bytes-im-browser/">German</a>, <a href="http://habrahabr.ru/company/nordavind/blog/205154/">Russian</a>, <a href="http://www.restonschauds.com/blog/index.html?article=882">French</a>...
 <br>
 <br>
-- <b>A lot of people</b> <a href="https://twitter.com/search?q=miniCodeEditor">tweet</a> and <a href="https://news.ycombinator.com/item?id=6860642">talk</a> about this!
+- <b>A lot of people</b> <a href="https://twitter.com/search?q=miniCodeEditor&f=realtime">tweet</a> and talk about this on <a href="https://news.ycombinator.com/item?id=6860642">Hacker News</a> and Reddit (<a href="http://www.reddit.com/r/tinycode/comments/1spyai/an_online_htmlcssjs_editor_in_162_bytes_save_load/">1</a> / <a href="http://www.reddit.com/r/javascript/comments/1spkc8/an_online_htmlcssjs_editor_in_162_bytes_save_load/">2</a>)
 <br>
 <br>
-- Last but not least: <b>MiniCodeEditor can fit in a tweet!</b> (140 characters) <a href="http://xem.github.io/?golfing">More info</a> - <a href="tweet.html">Demo</a>
+- <b>MiniCodeEditor can fit in a tweet!</b> (140 characters) <a href="http://xem.github.io/?golfing">More info</a> - <a href="tweet.html">Demo</a>
 <br>
 <br>
 <pre>document.write(unescape(escape("🁢𫱤𮐠𫱮𪑮𬁵𭀽𙱥𛡦𪑲𬱴𠱨𪑬𩀮𬱲𨱤𫱣👴𜡛𭠽𘡶𨑬𭑥𘡝𚰢🁳𨱲𪑰𭀾𘠫𭀰𦱶𧐫𘠼𧀯𬱣𬡩𬁴🠼𬱴𮑬𩐾𘠫𭀱𦱶𧐧𫱮𫁯𨑤🐧𩡯𬠨𪐽𜰻𪐭𛐻𚑥𛡩𫡮𩑲𢁔𣑌𚰽𘠼𭁥𮁴𨑲𩑡𘁩𩀽𭀢𚱩𚰢𘁲𫱷𬰽𞐾𘠧𪑤👥🠼𪑦𬡡𫑥🠠").replace(/uD./g,'')))
