@@ -9,7 +9,7 @@
   h4 { font-weight: normal; line-height: 40px; }
   pre { margin: 0 auto 5px; height: auto; padding: 5px; width: 840px; border: 2px solid #aaa; background: #fff; border-radius: 5px; font-family: monospace; overflow: hidden; resize: none; 	white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word }
   pre.short { height: 80px; }
-  pre.long { height: 110px; }
+  pre.long { height: 180px; }
   pre.intro { cursor: pointer; width: 700px; text-align: center; margin: 0 auto; }
   .right { float: right }
   h4 a { font-weight: bold }
@@ -25,7 +25,7 @@
   fieldset { padding: 20px; background: #f8f8f8; border: 5px solid #ccc; border-radius: 15px; }
   .buttons { text-align: center; }
   .buttons a { display: inline-block; color: #000; text-decoration: none; font-size: 25px; padding: 15px 30px; margin: 0 10px; font-weight: bold; line-height: 25px; background: #def; border: 2px solid #abc; border-radius: 10px; }
-  .buttons a div { font-size: 12px; line-height: 12px; }
+  .buttons a div { font-size: 12px; line-height: 14px; }
   .buttons a.important { cursor: pointer; background: #159; border: 2px solid #26a; color: #fff; border-radius: 10px; }
 </style>
 <a href=//github.com/xem/miniCodeEditor><img style="position:absolute;top:0;right:0;border:0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
@@ -36,8 +36,8 @@
 <br>
 <br>
 <div class=buttons>
-  <a href=# onclick="window.open('minimal.html','','directories=no, menubar=no, status=no, scrollbars=no, fullscreen=no, width=900, height=180')">Launch<div>the minimal version version</div></a>
-  <a href=# class=important onclick="alert('When you\'re done, just copy the URL to share your work!');window.open('prod','','directories=no, menubar=no, status=no, scrollbars=no, fullscreen=yes')">Launch<div>the full-featured version</div></a>
+  <a href=# onclick="window.open('minimal.html','','directories=no, menubar=no, status=no, scrollbars=no, fullscreen=no, width=900, height=180')">Launch<div>the minimal version <br>(168 bytes)</div></a>
+  <a href=# class=important onclick="alert('When you\'re done, just copy the URL to share your work!');window.open('1.1','','directories=no, menubar=no, status=no, scrollbars=no, fullscreen=yes')">Launch<div>the full-featured version<br>(1012 bytes)</div></a>
 </div>
 <br>
 <br id=custom>
@@ -57,11 +57,11 @@
 	<br>
 	<b>Full:</b>
 	<br>
-	Works on all browsers, with placeholders, shareable, <s>allows tabulations</s>, and <s>keeps the browser's history clean</s>.
+	Cross-browser, with placeholders, shareable, allows tabulations and keeps the browser's history clean.
 	<br>
 	<br>
-  <pre class=long id=code2>&lt;body onkeyup='l.hash=[j=t1[v="value"],c=t2[v],h=t3[v]].map(btoa);(D=e.firstChild.contentWindow.document).write(h||c||j?h+"&lt;script>"+j+"&lt;/script>&lt;style>"+c:"&lt;pre>Result");D.close()'onload='for(i=4;--i;e.innerHTML+="&lt;textarea id=t"+i+" placeholder="+[,"JS","CSS","HTML"][i]+" rows=9>"+atob([l.hash.split(/#|,/)[i]]))l=location;e.onkeyup()'id=e>&lt;iframe></pre>
-  <span class=right id=count2>351 bytes</span>
+  <pre class=long id=code2>&lt;body id=e>&lt;script>for(i=4;--i;)e.innerHTML+="&lt;textarea id=t"+i+" placeholder="+[,"JS","CSS","HTML"][i]+" rows=9 onkeydown='if((K=event).keyCode==9){K.preventDefault();s=this.selectionStart;this.value=this.value.substring(0,this.selectionStart)+\"\t\"+this.value.substring(this.selectionEnd);this.selectionEnd=s+1}'>"+(unescape((l=location).hash.slice(1,-1)).split("\x7F")[i-1]||"");onload=onkeyup=function(a){q=[(E=escape)(j=t1[v="value"]),E(c=t2[v]),E(h=t3[v])].join("\x7f")+1;(H=history)&&H.replaceState?H.replaceState(0,0,"#"+q):location.hash=q;I=h||c||j?h+"&lt;script>"+j+"&lt;\/script>&lt;style>"+c:"&lt;pre>Result";navigator.userAgent.match(/IE|Tr/)?((D=e.lastChild.contentWindow.document).write(I),D.close()):frames[0].location.replace("data:text/html,"+escape(I))}&lt;/script>&lt;iframe></pre>
+  <span class=right id=count2>778 bytes</span>
   <br>
   <br>
   <b>Style:</b>
@@ -178,7 +178,7 @@
 Edit HTML, CSS and JS, the result is updated in real time
 <br>
 <br>
-<iframe src="complete.html#Ly8gSmF2YVNjcmlwdAoKd2hvLmlubmVySFRNTCA9IAoid29ybGQiOw==,LyogQ1NTICovCgpib2R5IHsKICBiYWNrZ3JvdW5kOiAjMjZBOwogIGNvbG9yOiAjZmZmOwogIGZvbnQ6IDMwcHggYXJpYWw7CiAgbGluZS1oZWlnaHQ6IDEzMHB4OwogIHRleHQtYWxpZ246IGNlbnRlcjsKfQ==,PCEtLSBIVE1MIC0tPgoKSGVsbG8sCjxiIGlkPSJ3aG8iPjwvYj4gIQ==" width=890 height=200></iframe>
+<iframe src="complete.html#//%20JavaScript%0A%0Awho.innerHTML%20%3D%20%0A%22world%22%3B%7F/*%20CSS%20*/%0A%0Abody%20{%0A%20%20background%3A%20%2326A%3B%0A%20%20color%3A%20%23fff%3B%0A%20%20font%3A%2030px%20arial%3B%0A%20%20line-height%3A%20130px%3B%0A%20%20text-align%3A%20center%3B%0A}%7F%3C!--%20HTML%20--%3E%0A%0AHello%2C%0A%3Cb%20id%3D%22who%22%3E%3C/b%3E%20!1" width=900 height=200></iframe>
 <br>
 <br>
 <br>
