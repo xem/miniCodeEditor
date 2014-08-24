@@ -7,7 +7,7 @@
   h2 { font: bold 30px; line-height: 60px; }
   h3 { font-size: 26px; text-align: left; }
   h4 { font-weight: normal; line-height: 40px; }
-  pre { margin: 0 auto 5px; height: auto; padding: 5px; width: 840px; border: 2px solid #aaa; background: #fff; border-radius: 5px; font-family: monospace; overflow: hidden; resize: none; 	white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word }
+  pre { font-size:10px; margin: 0 auto 5px; height: auto; padding: 5px; width: 880px; border: 2px solid #aaa; background: #fff; border-radius: 5px; font-family: monospace; overflow: hidden; resize: none; 	white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word }
   pre.short { height: 80px; }
   pre.long { height: 180px; }
   pre.intro { cursor: pointer; width: 700px; text-align: center; margin: 0 auto; }
@@ -29,21 +29,17 @@
   .buttons a.important { cursor: pointer; background: #159; border: 2px solid #26a; color: #fff; border-radius: 10px; }
 </style>
 <a href=//github.com/xem/miniCodeEditor><img style="position:absolute;top:0;right:0;border:0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-<h1>MiniCodeEditor<sup> v.1.1</sup></h1>
-<h2>An online HTML/CSS/JavaScript code editor in <span>161</span>+ bytes</h2>
-<br>
+<h1>MiniCodeEditor<sup> v.1.2</sup></h1>
+<h2>An online HTML/CSS/JavaScript code editor in <span>158</span>+ bytes</h2>
 <h4>Inspired by <a href="//codepen.io">Codepen</a>, <a href="//jsfiddle.net">JSFiddle</a> and <a href="//dabblet.com/">dabblet</a><br>golfed by <a href=//twitter.com/MaximeEuziere>xem</a>, <a href=//twitter.com/p01>p01</a></a>, <a href=//twitter.com/subzey>subzey</a>, <a href=//twitter.com/aemkei>aemkei</a>, <b>rlauck</b> and <b>bburky</b></h4>
-<br>
-<br>
-<div class=buttons>
-  <a href=# onclick="window.open('minimal.html','','directories=no, menubar=no, status=no, scrollbars=no, fullscreen=no, width=900, height=180')">Launch<div>the minimal version <br>(168 bytes)</div></a>
-  <a href=# class=important onclick="alert('When you\'re done, just copy the URL to share your work!');window.open('1.1','','directories=no, menubar=no, status=no, scrollbars=no, fullscreen=yes')">Launch<div>the full-featured version<br>(1kb)</div></a>
-</div>
-<br>
-<br id=custom>
 <br>
 <h3>Source code:</h3>
 <br>
+<pre>&lt;body oninput='f.srcdoc=t0[v="value"]+"&lt;script>"+t2[v]+"&lt;/script>&lt;style>"+t1[v]'onload='for(i=3;i--;)f.outerHTML+="&lt;textarea id=t"+i+" rows=9>"'>&lt;iframe id=f></pre>
+<br>
+<br>
+<br>
+<!--
 <fieldset>
   <br>
 	<b>Minimal:</b>
@@ -172,7 +168,8 @@
 <br>
 <br>
 <br>
-<br>
+<br-->
+
 <h3>Demo:</h3>
 <br>
 Edit HTML, CSS and JS, the result is updated in real time
@@ -182,9 +179,18 @@ Edit HTML, CSS and JS, the result is updated in real time
 <br>
 <br>
 <br>
+<h3>Download / launch:</h3>
 <br>
 <br>
-<h3>Interesting Stuff:</h3>
+<div class=buttons>
+  <a href=# onclick="window.open('minimal.html','','directories=no, menubar=no, status=no, scrollbars=no, fullscreen=no, width=900, height=180')"><div>the minimal version <br>(158 bytes)</div></a>
+  <a href=# class=important onclick="alert('When you\'re done, just copy the URL to share your work!');window.open('1.1','','directories=no, menubar=no, status=no, scrollbars=no, fullscreen=yes')"><div>the full-featured version<br>(1kb)</div></a>
+</div>
+<br>
+<br>
+<br>
+<br>
+<h3>News:</h3>
 <br>
 - <b>Other code golfing projects</b> by <a href="http://xem.github.io/?golfing">xem</a>, <a href="http://aem1k.com/">aemkei</a> and <a href="http://www.p01.org/releases/">p01</a>
 <br>
@@ -210,14 +216,14 @@ Edit HTML, CSS and JS, the result is updated in real time
 - <b>Amazing talk by @aemkei</b> at Front End Ops Conf 2014 presents this project: <a href="https://www.youtube.com/watch?feature=player_detailpage&v=SinHLo5J0dg#t=705">video</a>
 <br>
 <br>
-- <b>MiniCodeEditor can fit in a tweet!</b> (140 characters) <a href="http://xem.github.io/?golfing">More info</a> - <a href="tweet.html">Demo</a>
+- <b>MiniCodeEditor can fit in a tweet!</b> (134 characters) <a href="http://xem.github.io/?golfing">More info</a> - <a href="tweet.html">Demo</a>
 <br>
 <br>
 <br>
-<pre>document.write(unescape(escape("🁢𫱤𮐠𫱮𪑮𬁵𭀽𙱥𛡦𪑲𬱴𠱨𪑬𩀮𬱲𨱤𫱣👴𜡛𭠽𘡶𨑬𭑥𘡝𚰢🁳𨱲𪑰𭀾𘠫𭀰𦱶𧐫𘠼𧀯𬱣𬡩𬁴🠼𬱴𮑬𩐾𘠫𭀱𦱶𧐧𫱮𫁯𨑤🐧𩡯𬠨𪐽𜰻𪐭𛐻𚑥𛡩𫡮𩑲𢁔𣑌𚰽𘠼𭁥𮁴𨑲𩑡𘁩𩀽𭀢𚱩𚰢𘁲𫱷𬰽𞐾𘠧𪑤👥🠼𪑦𬡡𫑥🠠").replace(/uD./g,'')))
+<pre>document.write(unescape(escape('🁢𫱤𮐠𫱮𪑮𬁵𭀽𙱦𛡳𬡣𩁯𨰽𭀰𦱶🐢𭡡𫁵𩐢𧐫𘠼𬱣𬡩𬁴🠢𚱴𜡛𭡝𚰢🀯𬱣𬡩𬁴🠼𬱴𮑬𩐾𘠫𭀱𦱶𧐧𫱮𫁯𨑤🐧𩡯𬠨𪐽𜰻𪐭𛐻𚑦𛡯𭑴𩑲𢁔𣑌𚰽𘠼𭁥𮁴𨑲𩑡𘁩𩀽𭀢𚱩𚰢𘁲𫱷𬰽𞐾𘠧🠼𪑦𬡡𫑥𘁩𩀽𩠾').replace(/uD./g,'')))
 </pre>
-<script src=//code.jquery.com/jquery-1.10.2.min.js></script>
-<script>
+<!--script src=//code.jquery.com/jquery-1.10.2.min.js></script-->
+<!--<script>
   $(function(){
     
 		$("#small").click();
@@ -276,4 +282,4 @@ Edit HTML, CSS and JS, the result is updated in real time
       update_code_2();
     });
   });
-</script>
+</script-->
