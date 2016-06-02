@@ -1,13 +1,13 @@
-<meta charset=utf-8>
+﻿<meta charset=utf-8>
 <style>
   body { width: 890px; margin: 20px auto; font-family: arial; }
   h1, h2, h3, h4 { text-align: center; margin: 0; }
   h1 { font: bold 60px monospace; line-height: 60px; }
   sup { font: normal 20px arial; }
   h2 { font: bold 30px; line-height: 60px; }
-  h3 { font-size: 26px; text-align: left; }
+  h3 { font-size: 22px; text-align: left; display: inline-block; }
   h4 { font-weight: normal; line-height: 40px; }
-  pre { font-size:10px; margin: 0 auto 5px; height: auto; padding: 5px; width: 880px; border: 2px solid #aaa; background: #fff; border-radius: 5px; font-family: monospace; overflow: hidden; resize: none; 	white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word }
+  pre { font-size: 15px; margin: 10px auto 5px; height: auto; padding: 10px; width: 880px; border: 2px solid #aaa; background: #fff; border-radius: 5px; font-family: monospace; overflow: hidden; resize: none; white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word }
   pre.short { height: 80px; }
   pre.long { height: 180px; }
   pre.intro { cursor: pointer; width: 700px; text-align: center; margin: 0 auto; }
@@ -29,148 +29,28 @@
   .buttons a.important { cursor: pointer; background: #159; border: 2px solid #26a; color: #fff; border-radius: 10px; }
 </style>
 <a href=//github.com/xem/miniCodeEditor><img style="position:absolute;top:0;right:0;border:0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-<h1>MiniCodeEditor<sup> v.1.2</sup></h1>
-<h2>An online HTML/CSS/JavaScript code editor in <span>158</span>+ bytes</h2>
+<h1>MiniCodeEditor</h1>
+<h2>An online HTML/CSS/JS playground in <span>156</span>+ bytes</h2>
 <h4>Inspired by <a href="//codepen.io">Codepen</a>, <a href="//jsfiddle.net">JSFiddle</a> and <a href="//dabblet.com/">dabblet</a><br>golfed by <a href=//twitter.com/MaximeEuziere>xem</a>, <a href=//twitter.com/p01>p01</a></a>, <a href=//twitter.com/subzey>subzey</a>, <a href=//twitter.com/aemkei>aemkei</a>, <b>rlauck</b> and <b>bburky</b></h4>
 <br>
-<h3>Source code:</h3>
+<h3>Source code (156b):</h3>
 <br>
-<pre>&lt;body oninput='f.srcdoc=t0[v="value"]+"&lt;script>"+t2[v]+"&lt;/script>&lt;style>"+t1[v]'onload='for(i=3;i--;)f.outerHTML+="&lt;textarea id=t"+i+" rows=9>"'>&lt;iframe id=f></pre>
-<br>
-<br>
-<br>
-<!--
-<fieldset>
-  <br>
-	<b>Minimal:</b>
-	<br>
-	Works only on modern browsers
-	<br>
-	<br>
-  <pre id=code1 class=short>&lt;body oninput='e.firstChild.srcdoc=t2[v="value"]+"&lt;script>"+t0[v]+"&lt;/script>&lt;style>"+t1[v]'onload='for(i=3;i--;)e.innerHTML+="&lt;textarea id=t"+i+" rows=9>"'id=e>&lt;iframe></pre>
-  <span class=right id=count1>168 bytes</span>
-	<br>
-	<br>
-	<b>Full:</b>
-	<br>
-	Cross-browser, with placeholders, shareable, allows tabulations and keeps the browser's history clean.
-	<br>
-	<br>
-  <pre class=long id=code2>&lt;body id=e>&lt;script>for(i=4;--i;)e.innerHTML+="&lt;textarea id=t"+i+" placeholder="+[,"JS","CSS","HTML"][i]+" rows=9 onkeydown='if((K=event).keyCode==9){K.preventDefault();s=this.selectionStart;this.value=this.value.substring(0,this.selectionStart)+\"\t\"+this.value.substring(this.selectionEnd);this.selectionEnd=s+1}'>"+(unescape((l=location).hash.slice(1,-1)).split("\x7F")[i-1]||"");onload=onkeyup=function(a){q=[(E=escape)(j=t1[v="value"]),E(c=t2[v]),E(h=t3[v])].join("\x7f")+1;(H=history)&&H.replaceState?H.replaceState(0,0,"#"+q):location.hash=q;I=h||c||j?h+"&lt;script>"+j+"&lt;\/script>&lt;style>"+c:"&lt;pre>Result";navigator.userAgent.match(/IE|Tr/)?((D=e.lastChild.contentWindow.document).write(I),D.close()):frames[0].location.replace("data:text/html,"+escape(I))}&lt;/script>&lt;iframe></pre>
-  <span class=right id=count2>778 bytes</span>
-  <br>
-  <br>
-  <b>Style:</b>
-  <br>
-  <table>
-    <tr>
-      <td class=align>
-        <label>
-          <input type=radio name=style class=style id=small checked>
-          <table width=60 height=20 class=style style=margin-top:22px>
-            <tr>
-              <th bgcolor=tan>&nbsp;</th>
-              <th>&nbsp;</th>
-              <th>&nbsp;</th>
-              <th>&nbsp;</th>
-            </tr>
-          </table>
-        </label>
-      </td>
-      <td class=align>
-        <label>
-          <input type=radio name=style class=style id=four_quarters>
-          <table width=50 height=50 class=style>
-            <tr>
-              <th width=25>&nbsp;</th>
-              <th width=25>&nbsp;</th>
-            </tr>
-            <tr>
-              <th width=25>&nbsp;</th>
-              <th width=25 bgcolor=tan>&nbsp;</th>
-            </tr>
-          </table>
-        </label>
-      </td>
-      <td class=align>
-        <label>
-          <input type=radio name=style class=style id=top>
-          <table width=50 height=50 class=style>
-            <tr>
-              <th width=17>&nbsp;</th>
-              <th width=17>&nbsp;</th>
-              <th width=17>&nbsp;</th>
-            </tr>
-            <tr>
-              <th colspan=3 bgcolor=tan>&nbsp;</th>
-            </tr>
-          </table>
-        </label>
-      </td>
-      <td class=align>
-        <label>
-          <input type=radio name=style class=style id=left>
-          <table width=50 height=50 class=style>
-            <tr>
-              <th width=25>&nbsp;</th>
-              <th width=25 rowspan=3 bgcolor=tan>&nbsp;</th>
-            </tr>
-            <tr>
-              <th width=25>&nbsp;</th>
-            </tr>
-            <tr>
-              <th width=25>&nbsp;</th>
-            </tr>
-          </table>
-        </label>
-      </td>
-      <td class=align>
-        <label>
-          <input type=radio name=style class=style id=bottom>
-          <table width=50 height=50 class=style>
-            <tr>
-              <th colspan=3 bgcolor=tan>&nbsp;</th>
-            </tr>
-            <tr>
-              <th width=17>&nbsp;</th>
-              <th width=17>&nbsp;</th>
-              <th width=17>&nbsp;</th>
-            </tr>
-          </table>
-        </label>
-      </td>
-      <td class=align>
-        <label>
-          <input type=radio name=style class=style id=right>
-          <table width=50 height=50 class=style>
-            <tr>
-              <th width=25 rowspan=3 bgcolor=tan>&nbsp;</th>
-              <th width=25>&nbsp;</th>
-            </tr>
-            <tr>
-              <th width=25>&nbsp;</th>
-            </tr>
-            <tr>
-              <th width=25>&nbsp;</th>
-            </tr>
-          </table>
-        </label>
-      </td>
-      <td class=align>
-        <label>
-          <input type=radio name=style class=style id=none> <span>None</span>
-        </label>
-      </td>
-    </tr>
-  </table>
-</fieldset>
+<pre>&lt;body oninput='f.srcdoc=t0[v="value"]+`&lt;script>${t2[v]}&lt;/script>&lt;style>`+t1[v]'onload='for(i=3;i--;)f.outerHTML+=`&lt;textarea id=t${i} rows=9>`'>&lt;iframe id=f></pre>
+
 <br>
 <br>
 <br>
+<h3>Tweetable version (131 chars)</h3> <a href="http://xem.github.io/golfing/#jstweet_en">More info</a> - <a href="tweet.html">Demo</a>
 <br>
-<br-->
+<pre>document.write(unescape(escape`🁢𫱤𮐠𫱮𪑮𬁵𭀽𙱦𛡳𬡣𩁯𨰽𭀰𦱶🐢𭡡𫁵𩐢𧐫𨀼𬱣𬡩𬁴🠤𮱴𜡛𭡝𯐼𛱳𨱲𪑰𭀾🁳𭁹𫁥🡠𚱴𜑛𭡝𙱯𫡬𫱡𩀽𙱦𫱲𚁩🐳𞱩𛐭𞰩𩠮𫱵𭁥𬡈𥁍𣀫👠🁴𩑸𭁡𬡥𨐠𪑤👴𙁻𪑽𘁲𫱷𬰽𞐾𨀧🠼𪑦𬡡𫑥𘁩𩀽𩠾`.replace(/u../g,'')))
+</pre>
+
+<br>
+<br>
+<br>
 
 <h3>Demo:</h3>
+<br>
 <br>
 Edit HTML, CSS and JS, the result is updated in real time
 <br>
@@ -186,11 +66,12 @@ Edit HTML, CSS and JS, the result is updated in real time
   <a href=# onclick="window.open('minimal.html','','directories=no, menubar=no, status=no, scrollbars=no, fullscreen=no, width=900, height=180')"><div>the minimal version <br>(158 bytes)</div></a>
   <a href=# class=important onclick="alert('When you\'re done, just copy the URL to share your work!');window.open('1.1','','directories=no, menubar=no, status=no, scrollbars=no, fullscreen=yes')"><div>the full-featured version<br>(1kb)</div></a>
 </div>
-<br>
+
 <br>
 <br>
 <br>
 <h3>News:</h3>
+<br>
 <br>
 - <b>Other code golfing projects</b> by <a href="http://xem.github.io/?golfing">xem</a>, <a href="http://aem1k.com/">aemkei</a> and <a href="http://www.p01.org/releases/">p01</a>
 <br>
@@ -216,70 +97,9 @@ Edit HTML, CSS and JS, the result is updated in real time
 - <b>Amazing talk by @aemkei</b> at Front End Ops Conf 2014 presents this project: <a href="https://www.youtube.com/watch?feature=player_detailpage&v=SinHLo5J0dg#t=705">video</a>
 <br>
 <br>
-- <b>MiniCodeEditor can fit in a tweet!</b> (134 characters) <a href="http://xem.github.io/?golfing">More info</a> - <a href="tweet.html">Demo</a>
 <br>
 <br>
+<hr>
 <br>
-<pre>document.write(unescape(escape('🁢𫱤𮐠𫱮𪑮𬁵𭀽𙱦𛡳𬡣𩁯𨰽𭀰𦱶🐢𭡡𫁵𩐢𧐫𘠼𬱣𬡩𬁴🠢𚱴𜡛𭡝𚰢🀯𬱣𬡩𬁴🠼𬱴𮑬𩐾𘠫𭀱𦱶𧐧𫱮𫁯𨑤🐧𩡯𬠨𪐽𜰻𪐭𛐻𚑦𛡯𭑴𩑲𢁔𣑌𚰽𘠼𭁥𮁴𨑲𩑡𘁩𩀽𭀢𚱩𚰢𘁲𫱷𬰽𞐾𘠧🠼𪑦𬡡𫑥𘁩𩀽𩠾').replace(/uD./g,'')))
-</pre>
-<!--script src=//code.jquery.com/jquery-1.10.2.min.js></script-->
-<!--<script>
-  $(function(){
-    
-		$("#small").click();
-		var text_code_minimal = $("#code1").text();
-		var text_code_complete = $("#code2").text();
-		var text_rows = " rows=9";
-		var text_style = "";
-		
-    var update_code_1 = function(){
-			$("#code1").text((text_code_minimal + text_style));
-      $("#count1").text((text_code_minimal + text_style).length + " bytes");
-			$("#code2").text((text_code_complete + text_style));
-      $("#count2").text((text_code_complete + text_style).length + " bytes");
-		}
-		
-		var update_code_2 = function(){
-			$("#code1").text((text_code_minimal + text_style).replace(text_rows, ""));
-			$("#count1").text((text_code_minimal + text_style).replace(text_rows, "").length + " bytes");
-			$("#code2").text((text_code_complete + text_style).replace(text_rows, ""));
-      $("#count2").text((text_code_complete + text_style).replace(text_rows, "").length + " bytes");
-		}
-		
-    // On click    
-    $("#small").click(function(){
-      text_style = "";
-      update_code_1();
-    });
-    
-    $("#four_quarters").click(function(){
-      text_style = "</iframe><style>*{box-sizing:border-box;-moz-box-sizing:border-box;margin:0;vertical-align:top}textarea,iframe{resize:none;width:50%;height:50%;border:1px solid}iframe{position:absolute;bottom:0;right:0}";
-			update_code_2();
-    });
-    
-    $("#top").click(function(){
-      text_style = "</iframe><style>*{box-sizing:border-box;-moz-box-sizing:border-box;margin:0;vertical-align:top}textarea,iframe{height:50%;border:1px solid}textarea{resize:none;width:33.333%}iframe{width:100%}";
-      update_code_2();
-    });
-    
-    $("#left").click(function(){
-      text_style = "</iframe><style>*{box-sizing:border-box;-moz-box-sizing:border-box;margin:0;vertical-align:top}textarea,iframe{width:50%;border:1px solid}textarea{float:left;clear:left;resize:none;height:33.333%}iframe{height:100%;position:absolute;top:0}";
-      update_code_2();
-    });
-    
-    $("#bottom").click(function(){
-      text_style = "</iframe><style>*{box-sizing:border-box;-moz-box-sizing:border-box;margin:0;vertical-align:top}textarea,iframe{height:50%;border:1px solid}textarea{resize:none;width:33.333%}iframe{width:100%;position:absolute;bottom:0}";
-      update_code_2();
-    });
-
-    $("#right").click(function(){
-      text_style = "</iframe><style>*{box-sizing:border-box;-moz-box-sizing:border-box;margin:0;vertical-align:top}textarea,iframe{width:50%;border:1px solid}textarea{resize:none;height:33.333%}iframe{height:100%;float:left}";
-      update_code_2();
-    });
-    
-    $("#none").click(function(){
-      text_style = "";
-      update_code_2();
-    });
-  });
-</script-->
+<br>
+<center><b>2013-2016 - The Codegolf Team
