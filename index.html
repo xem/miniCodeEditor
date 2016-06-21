@@ -30,28 +30,14 @@
 </style>
 <a href=//github.com/xem/miniCodeEditor><img style="position:absolute;top:0;right:0;border:0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 <h1>MiniCodeEditor</h1>
-<h2>An online HTML/CSS/JS playground in <span>156</span>+ bytes</h2>
+<h2>An online HTML/CSS/JS playground in <span>64</span>+ bytes</h2>
 <h4>Inspired by <a href="//codepen.io">Codepen</a>, <a href="//jsfiddle.net">JSFiddle</a> and <a href="//dabblet.com/">dabblet</a><br>golfed by <a href=//twitter.com/MaximeEuziere>xem</a>, <a href=//twitter.com/p01>p01</a></a>, <a href=//twitter.com/subzey>subzey</a>, <a href=//twitter.com/aemkei>aemkei</a>, <b>rlauck</b> and <b>bburky</b></h4>
-<br>
-<h3>Source code (156b):</h3>
-<br>
-<pre>&lt;body oninput='f.srcdoc=t0[v="value"]+`&lt;script>${t2[v]}&lt;/script>&lt;style>`+t1[v]'onload='for(i=3;i--;)f.outerHTML+=`&lt;textarea id=t${i} rows=9>`'>&lt;iframe id=f></pre>
 
 <br>
 <br>
 <br>
-<h3>Tweetable version (131 chars)</h3> <a href="http://xem.github.io/golfing/#jstweet_en">More info</a> - <a href="tweet.html">Demo</a>
-<br>
-<pre>document.write(unescape(escape`🁢𫱤𮐠𫱮𪑮𬁵𭀽𙱦𛡳𬡣𩁯𨰽𭀰𦱶🐢𭡡𫁵𩐢𧐫𨀼𬱣𬡩𬁴🠤𮱴𜡛𭡝𯐼𛱳𨱲𪑰𭀾🁳𭁹𫁥🡠𚱴𜑛𭡝𙱯𫡬𫱡𩀽𙱦𫱲𚁩🐳𞱩𛐭𞰩𩠮𫱵𭁥𬡈𥁍𣀫👠🁴𩑸𭁡𬡥𨐠𪑤👴𙁻𪑽𘁲𫱷𬰽𞐾𨀧🠼𪑦𬡡𫑥𘁩𩀽𩠾`.replace(/u../g,'')))
-</pre>
-
-<br>
-<br>
 <br>
 
-<h3>Demo:</h3>
-<br>
-<br>
 Edit HTML, CSS and JS, the result is updated in real time
 <br>
 <br>
@@ -59,17 +45,49 @@ Edit HTML, CSS and JS, the result is updated in real time
 <br>
 <br>
 <br>
-<h3>Download / launch:</h3>
+
+<br>
+<h3>Source code (156b)</h3> - <a href="minimal.html">Download</a>
+<br>
+<pre>&lt;body oninput='f.srcdoc=t0[v="value"]+`&lt;script>${t2[v]}&lt;/script>&lt;style>`+t1[v]'onload='for(i=3;i--;)f.outerHTML+=`&lt;textarea id=t${i} rows=9>`'>&lt;iframe id=f></pre>
+
+<br>
+<br>
+<h3>Tweetable version (131 chars)</h3> - <a href="http://xem.github.io/golfing/#jstweet_en">More info</a> - <a href="tweet.html">Download</a>
+<br>
+<pre>document.write(unescape(escape`🁢𫱤𮐠𫱮𪑮𬁵𭀽𙱦𛡳𬡣𩁯𨰽𭀰𦱶🐢𭡡𫁵𩐢𧐫𨀼𬱣𬡩𬁴🠤𮱴𜡛𭡝𯐼𛱳𨱲𪑰𭀾🁳𭁹𫁥🡠𚱴𜑛𭡝𙱯𫡬𫱡𩀽𙱦𫱲𚁩🐳𞱩𛐭𞰩𩠮𫱵𭁥𬡈𥁍𣀫👠🁴𩑸𭁡𬡥𨐠𪑤👴𙁻𪑽𘁲𫱷𬰽𞐾𨀧🠼𪑦𬡡𫑥𘁩𩀽𩠾`.replace(/u../g,'')))
+</pre>
+
+<br>
+<br>
+<h3>Super mini version (64b)</h3> - <a href="mini.html">Download</a>
+<br>
+<pre>&lt;textarea oninput=f.srcdoc=value rows=9>&lt;/textarea>&lt;iframe id=f></pre>
+<br>
+<br>
+<h3>Launch:</h3>
 <br>
 <br>
 <div class=buttons>
-  <a href=# onclick="window.open('minimal.html','','directories=no, menubar=no, status=no, scrollbars=no, fullscreen=no, width=900, height=180')"><div>the minimal version <br>(158 bytes)</div></a>
-  <a href=# class=important onclick="alert('When you\'re done, just copy the URL to share your work!');window.open('1.1','','directories=no, menubar=no, status=no, scrollbars=no, fullscreen=yes')"><div>the full-featured version<br>(1kb)</div></a>
+  <a href=# onclick="window.open('mini.html','','directories=no, menubar=no, status=no, scrollbars=no, fullscreen=no, width=600, height=180')"><div>super mini version <br>(64 bytes)</div></a>
+  <a href=# onclick="window.open('minimal.html','','directories=no, menubar=no, status=no, scrollbars=no, fullscreen=no, width=900, height=180')"><div>miniCodeEditor <br>(156 bytes)</div></a>
+  <a href=# onclick="alert('When you\'re done, just copy the URL to share your work!');window.open('1.1','','directories=no, menubar=no, status=no, scrollbars=no, fullscreen=yes')"><div>complete editor<br>(1kb)</div></a>
+  <a href="http://codegolf.github.io/codegolfIDE/" style="height:30px;line-height:40px;vertical-align:top"><div style="height:30px;line-height:30px;vertical-align:top">codegolfIDE</div></a>
 </div>
 
 <br>
 <br>
 <br>
+<br>
+<h3>Making-of: (enable subtitles!)</h3>
+<br>
+<br>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/0iPmsZj378U?rel=0&hl=en&cc_load_policy=1&yt:cc=on" frameborder="0" allowfullscreen style="border: 2px solid"></iframe>
+<br>
+<br>
+<br>
+<br>
+
 <h3>News:</h3>
 <br>
 <br>
