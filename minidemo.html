@@ -1,0 +1,18 @@
+<textarea oninput=f.srcdoc=value rows=9 cols=40 id=t></textarea><iframe id=f></iframe>
+<script>
+
+onload=function(){
+
+f.srcdoc=t.value=`Hello, <b id="who"></b> !
+<script>who.innerHTML = "world";<\/script>
+<style>
+body {
+  background: #26A;
+  color: #fff;
+  font: 30px arial;
+  line-height: 130px;
+  text-align: center;
+}`;
+
+}
+</script>
